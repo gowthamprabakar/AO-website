@@ -1229,9 +1229,397 @@ const Home: FC = () => {
   )
 }
 
+// Healthcare Page Components
+const HealthcareHero: FC = () => {
+  return (
+    <section id="geometric-hero-container" style={{
+      position: 'relative',
+      minHeight: '100vh',
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      overflow: 'hidden',
+      background: '#030303'
+    }}>
+      {/* Background gradient */}
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        background: 'radial-gradient(ellipse at top, rgba(0, 255, 148, 0.05), transparent 50%), radial-gradient(ellipse at bottom right, rgba(59, 130, 246, 0.05), transparent 50%)',
+        filter: 'blur(60px)'
+      }}></div>
+
+      {/* Content */}
+      <div style={{
+        position: 'relative',
+        zIndex: 10,
+        maxWidth: '1200px',
+        margin: '0 auto',
+        padding: '0 32px',
+        textAlign: 'center'
+      }}>
+        {/* Badge */}
+        <div class="geometric-content-item geometric-content-item-0" style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '8px',
+          padding: '8px 16px',
+          background: 'rgba(0, 255, 148, 0.05)',
+          border: '2px solid rgba(0, 255, 148, 0.2)',
+          borderRadius: '50px',
+          marginBottom: '48px'
+        }}>
+          <div style={{
+            width: '8px',
+            height: '8px',
+            borderRadius: '50%',
+            background: '#00FF94'
+          }}></div>
+          <span style={{
+            fontSize: '14px',
+            color: 'rgba(255, 255, 255, 0.7)',
+            letterSpacing: '0.1em',
+            textTransform: 'uppercase'
+          }}>Biologic Intelligence</span>
+        </div>
+
+        {/* Main Headline */}
+        <h1 class="geometric-content-item geometric-content-item-1" style={{
+          fontSize: 'clamp(40px, 8vw, 96px)',
+          fontWeight: '700',
+          marginBottom: '32px',
+          lineHeight: '1.1',
+          letterSpacing: '-0.02em'
+        }}>
+          <span style={{
+            background: 'linear-gradient(to bottom, white, rgba(255, 255, 255, 0.8))',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}>From Reactive Care to</span>
+          <br />
+          <span style={{
+            background: 'linear-gradient(90deg, #00FF94, rgba(255, 255, 255, 0.9), #00FF94)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}>Assured Health</span>
+        </h1>
+
+        {/* Subtitle */}
+        <p class="geometric-content-item geometric-content-item-2" style={{
+          fontSize: 'clamp(16px, 2vw, 20px)',
+          color: 'rgba(255, 255, 255, 0.6)',
+          marginBottom: '48px',
+          lineHeight: '1.7',
+          maxWidth: '800px',
+          margin: '0 auto 48px'
+        }}>
+          Deploy autonomous AI agents across oncology, drug discovery, population health, and clinical operations—measured in outcomes, not hours.
+        </p>
+
+        {/* Stats Card */}
+        <div class="geometric-content-item geometric-content-item-2" style={{
+          display: 'inline-block',
+          background: 'rgba(0, 255, 148, 0.05)',
+          backdropFilter: 'blur(20px)',
+          border: '1px solid rgba(0, 255, 148, 0.2)',
+          borderRadius: '24px',
+          padding: '32px 64px',
+          marginTop: '24px'
+        }}>
+          <div style={{
+            fontSize: '72px',
+            fontWeight: '700',
+            color: '#00FF94',
+            lineHeight: '1',
+            marginBottom: '8px'
+          }}>50%</div>
+          <div style={{
+            fontSize: '18px',
+            color: 'white',
+            fontWeight: '600',
+            marginBottom: '4px'
+          }}>Faster Time-to-Insight</div>
+          <div style={{
+            fontSize: '14px',
+            color: 'rgba(255, 255, 255, 0.5)'
+          }}>From Weeks to Days</div>
+        </div>
+      </div>
+
+      {/* Gradient overlay */}
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        background: 'linear-gradient(to top, #030303, transparent, rgba(3, 3, 3, 0.8))',
+        pointerEvents: 'none'
+      }}></div>
+    </section>
+  )
+}
+
+const SolutionMatrixSection: FC = () => {
+  const solutions = [
+    {
+      category: 'Precision Medicine & R&D',
+      icon: 'fa-dna',
+      title: 'Oncology Precision Engine',
+      description: 'Real-time synthesis of clinical notes, genomics, and imaging.',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+      tags: ['Vertex AI', 'spaCy', 'BERT', 'Python'],
+      metric: '50% Faster Time-to-Insight',
+      metricColor: '#00FF94',
+      gradient: 'linear-gradient(135deg, rgba(0, 255, 148, 0.15), rgba(0, 255, 148, 0.05))'
+    },
+    {
+      category: 'Drug Discovery',
+      icon: 'fa-flask',
+      title: 'In Silico R&D Lab',
+      description: 'Simulate and predict drug candidates before the lab.',
+      image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80',
+      tags: ['PyTorch', 'TensorFlow', 'BioNeMo'],
+      metric: '40-60% Reduction in Time-to-Candidate',
+      metricColor: '#00FF94',
+      gradient: 'linear-gradient(135deg, rgba(0, 255, 148, 0.15), rgba(0, 255, 148, 0.05))'
+    },
+    {
+      category: 'Clinical Care',
+      icon: 'fa-user-md',
+      title: 'Population Risk Radar',
+      description: 'Predictive risk stratification & population health management.',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
+      tags: ['Snowflake', 'dbt', 'ML Models'],
+      metric: '22% Reduction in Preventable Admissions',
+      metricColor: '#00FF94',
+      gradient: 'linear-gradient(135deg, rgba(0, 255, 148, 0.15), rgba(0, 255, 148, 0.05))'
+    },
+    {
+      category: 'Medical Imaging',
+      icon: 'fa-brain',
+      title: 'Computer Vision Diagnostics',
+      description: 'Automated medical imaging & pathology analysis.',
+      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80',
+      tags: ['MONAI', 'AWS SageMaker', 'Docker'],
+      metric: 'FDA SaMD Ready',
+      metricColor: '#00FF94',
+      gradient: 'linear-gradient(135deg, rgba(0, 255, 148, 0.15), rgba(0, 255, 148, 0.05))'
+    },
+    {
+      category: 'Patient Engagement',
+      icon: 'fa-comments',
+      title: 'Secure Patient Messaging',
+      description: 'Meet patients on WhatsApp & Viber with HIPAA-compliant AI triage.',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
+      tags: ['Twilio', 'Redis', 'GPT-4'],
+      metric: '33% Reduction in No-Shows',
+      metricColor: '#00FF94',
+      gradient: 'linear-gradient(135deg, rgba(0, 255, 148, 0.15), rgba(0, 255, 148, 0.05))'
+    },
+    {
+      category: 'Clinical Documentation',
+      icon: 'fa-file-medical',
+      title: 'Ambient Clinical Scribe',
+      description: 'Give clinicians back their time with AI documentation.',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+      tags: ['Whisper', 'GPT-4', 'FHIR'],
+      metric: '2hrs Saved per Shift',
+      metricColor: '#00FF94',
+      gradient: 'linear-gradient(135deg, rgba(0, 255, 148, 0.15), rgba(0, 255, 148, 0.05))'
+    },
+    {
+      category: 'Revenue Operations',
+      icon: 'fa-dollar-sign',
+      title: 'Autonomous Revenue Cycle',
+      description: 'Cognition coding and denial management at scale.',
+      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80',
+      tags: ['ICD-10', 'CPT', 'NLP'],
+      metric: '30% Reduction in DNFB Days',
+      metricColor: '#00FF94',
+      gradient: 'linear-gradient(135deg, rgba(0, 255, 148, 0.15), rgba(0, 255, 148, 0.05))'
+    },
+    {
+      category: 'Clinical Trials',
+      icon: 'fa-clipboard-check',
+      title: 'Clinical Trial Data Fabric',
+      description: 'Central nervous system for clinical evidence.',
+      image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80',
+      tags: ['CDISC', 'EDC', 'Databricks'],
+      metric: 'Regulatory Ready',
+      metricColor: '#00FF94',
+      gradient: 'linear-gradient(135deg, rgba(0, 255, 148, 0.15), rgba(0, 255, 148, 0.05))'
+    }
+  ];
+
+  return (
+    <section style={{
+      padding: '120px 32px',
+      background: '#050505',
+      position: 'relative'
+    }}>
+      <div style={{
+        maxWidth: '1600px',
+        margin: '0 auto'
+      }}>
+        {/* Section Header */}
+        <div style={{
+          textAlign: 'center',
+          marginBottom: '80px'
+        }}>
+          <h2 style={{
+            fontSize: 'clamp(36px, 5vw, 56px)',
+            fontWeight: '700',
+            color: 'white',
+            marginBottom: '16px'
+          }}>Solution Matrix</h2>
+          <p style={{
+            fontSize: '18px',
+            color: 'rgba(255, 255, 255, 0.6)',
+            maxWidth: '600px',
+            margin: '0 auto'
+          }}>Highly interactive intelligence cards for every healthcare challenge</p>
+        </div>
+
+        {/* Solutions Grid */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))',
+          gap: '32px'
+        }}>
+          {solutions.map((solution, index) => (
+            <div style={{
+              background: 'rgba(255, 255, 255, 0.03)',
+              backdropFilter: 'blur(20px)',
+              border: '1px solid rgba(255, 255, 255, 0.08)',
+              borderRadius: '24px',
+              overflow: 'hidden',
+              transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+              cursor: 'pointer',
+              position: 'relative'
+            }}
+            class="solution-card">
+              {/* Image Background */}
+              <div style={{
+                height: '220px',
+                backgroundImage: `url(${solution.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                position: 'relative'
+              }}>
+                <div style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background: solution.gradient
+                }}></div>
+                
+                {/* Category Badge */}
+                <div style={{
+                  position: 'absolute',
+                  top: '16px',
+                  left: '16px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  padding: '6px 12px',
+                  background: 'rgba(0, 0, 0, 0.6)',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(0, 255, 148, 0.3)',
+                  borderRadius: '50px',
+                  fontSize: '12px',
+                  color: '#00FF94'
+                }}>
+                  <i class={`fas ${solution.icon}`}></i>
+                  <span>{solution.category}</span>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div style={{
+                padding: '24px'
+              }}>
+                <h3 style={{
+                  fontSize: '22px',
+                  fontWeight: '700',
+                  color: 'white',
+                  marginBottom: '12px',
+                  lineHeight: '1.3'
+                }}>{solution.title}</h3>
+                
+                <p style={{
+                  fontSize: '15px',
+                  color: 'rgba(255, 255, 255, 0.6)',
+                  lineHeight: '1.6',
+                  marginBottom: '20px'
+                }}>{solution.description}</p>
+
+                {/* Tags */}
+                <div style={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: '8px',
+                  marginBottom: '20px'
+                }}>
+                  {solution.tags.map(tag => (
+                    <span style={{
+                      padding: '6px 12px',
+                      background: 'rgba(255, 255, 255, 0.05)',
+                      border: '1px solid rgba(255, 255, 255, 0.1)',
+                      borderRadius: '8px',
+                      fontSize: '12px',
+                      color: 'rgba(255, 255, 255, 0.7)',
+                      fontWeight: '500'
+                    }}>{tag}</span>
+                  ))}
+                </div>
+
+                {/* Metric */}
+                <div style={{
+                  padding: '16px',
+                  background: 'rgba(0, 255, 148, 0.08)',
+                  border: '1px solid rgba(0, 255, 148, 0.2)',
+                  borderRadius: '12px',
+                  fontSize: '14px',
+                  fontWeight: '600',
+                  color: solution.metricColor,
+                  textAlign: 'center'
+                }}>{solution.metric}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Add hover effect styles */}
+      <style>{`
+        .solution-card:hover {
+          transform: translateY(-8px);
+          border-color: rgba(0, 255, 148, 0.3);
+          box-shadow: 0 20px 60px rgba(0, 255, 148, 0.15);
+        }
+      `}</style>
+    </section>
+  )
+}
+
+// Healthcare Page Layout
+const HealthcarePage: FC = () => {
+  return (
+    <Layout>
+      <FloatingNav />
+      <HealthcareHero />
+      <SolutionMatrixSection />
+      <Footer />
+      <script src="/static/geometric-hero.js" defer></script>
+    </Layout>
+  )
+}
+
 // Routes
 app.get('/', (c) => {
   return c.html(<Home />)
+})
+
+app.get('/healthcare', (c) => {
+  return c.html(<HealthcarePage />)
 })
 
 export default app

@@ -300,17 +300,8 @@ class IntelligenceModal {
 
   handleIndustryClick(industry) {
     console.log('Navigate to:', industry);
-    // Scroll to the corresponding industry section
-    const section = document.querySelector(`[data-section="${industry}"]`);
-    if (section) {
-      this.close();
-      setTimeout(() => {
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 300);
-    } else {
-      // If section doesn't exist, you can handle navigation here
-      console.log(`Navigate to ${industry} page`);
-    }
+    // Navigate to industry page
+    window.location.href = `/${industry}`;
   }
 
   open() {
