@@ -15,6 +15,7 @@ const Layout: FC = (props) => {
         <link rel="stylesheet" href="/static/globals.css" />
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+        <script src="/static/shader-hero.js" defer></script>
         <style>{`
           @keyframes float {
             0%, 100% { transform: translateY(0px); }
@@ -42,6 +43,45 @@ const Layout: FC = (props) => {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
+          }
+          @keyframes fade-in-down {
+            from {
+              opacity: 0;
+              transform: translateY(-20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          @keyframes fade-in-up {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          .animate-fade-in-down {
+            animation: fade-in-down 0.8s ease-out forwards;
+          }
+          .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out forwards;
+            opacity: 0;
+          }
+          .animation-delay-200 {
+            animation-delay: 0.2s;
+          }
+          .animation-delay-400 {
+            animation-delay: 0.4s;
+          }
+          .animation-delay-600 {
+            animation-delay: 0.6s;
+          }
+          .animation-delay-800 {
+            animation-delay: 0.8s;
           }
         `}</style>
       </head>
@@ -137,7 +177,7 @@ const FloatingNav: FC = () => {
   )
 }
 
-// Hero Section
+// Hero Section with Shader Background
 const Hero: FC = () => {
   return (
     <section style={{
@@ -149,35 +189,28 @@ const Hero: FC = () => {
       padding: '100px 32px 80px',
       position: 'relative',
       overflow: 'hidden',
-      background: 'linear-gradient(135deg, #1a0a2e 0%, #0f0f23 50%, #050505 100%)'
+      background: '#000000'
     }}>
-      {/* Background Effects */}
-      <div style={{
-        position: 'absolute',
-        top: '10%',
-        left: '10%',
-        width: '600px',
-        height: '600px',
-        background: 'radial-gradient(circle, rgba(0, 255, 148, 0.15) 0%, transparent 70%)',
-        borderRadius: '50%',
-        filter: 'blur(80px)',
-        animation: 'float 8s ease-in-out infinite'
-      }}></div>
-      <div style={{
-        position: 'absolute',
-        bottom: '10%',
-        right: '10%',
-        width: '500px',
-        height: '500px',
-        background: 'radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%)',
-        borderRadius: '50%',
-        filter: 'blur(80px)',
-        animation: 'float 10s ease-in-out infinite',
-        animationDelay: '2s'
-      }}></div>
+      {/* WebGL Shader Canvas Background */}
+      <canvas 
+        id="shader-hero-canvas"
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'contain',
+          touchAction: 'none',
+          zIndex: 0
+        }}
+      ></canvas>
+      
+      {/* Content Container with higher z-index */}
+      <div style={{ position: 'relative', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
 
       {/* Trust Badge */}
-      <div style={{
+      <div class="animate-fade-in-down" style={{
         background: 'rgba(255, 255, 255, 0.05)',
         border: '1px solid rgba(255, 255, 255, 0.1)',
         borderRadius: '50px',
@@ -187,7 +220,8 @@ const Hero: FC = () => {
         alignItems: 'center',
         gap: '8px',
         fontSize: '14px',
-        color: '#00FF94'
+        color: '#00FF94',
+        backdropFilter: 'blur(12px)'
       }}>
         <i class="fas fa-shield-alt"></i>
         <span>SOC2 Type II Certified</span>
@@ -202,12 +236,12 @@ const Hero: FC = () => {
         marginBottom: '24px',
         letterSpacing: '-0.02em'
       }}>
-        <div>We Architect</div>
-        <div class="gradient-text">Assured Outcomes</div>
+        <div class="animate-fade-in-up animation-delay-200">We Architect</div>
+        <div class="gradient-text animate-fade-in-up animation-delay-400">Assured Outcomes</div>
       </h1>
 
       {/* Subtitle */}
-      <p style={{
+      <p class="animate-fade-in-up animation-delay-600" style={{
         fontSize: 'clamp(16px, 2vw, 20px)',
         lineHeight: '1.6',
         color: 'rgba(255, 255, 255, 0.7)',
@@ -219,7 +253,7 @@ const Hero: FC = () => {
       </p>
 
       {/* CTA Buttons */}
-      <div style={{
+      <div class="animate-fade-in-up animation-delay-800" style={{
         display: 'flex',
         gap: '16px',
         flexWrap: 'wrap',
@@ -316,6 +350,7 @@ const Hero: FC = () => {
           <div style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)', marginTop: '8px' }}>Faster</div>
         </div>
       </div>
+      </div> {/* Close content container */}
     </section>
   )
 }
