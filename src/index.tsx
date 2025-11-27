@@ -1846,8 +1846,8 @@ const HealthcareEngagementSection: FC = () => {
                 background: 'rgba(255, 255, 255, 0.05)',
                 backdropFilter: 'blur(12px)'
               }}>
-                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" 
-                  alt="Healthcare team collaboration" 
+                <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800&q=80" 
+                  alt="Doctor with stethoscope examining patient" 
                   style={{
                     width: '100%',
                     height: '100%',
@@ -1896,8 +1896,8 @@ const HealthcareEngagementSection: FC = () => {
                 border: '1px solid rgba(59, 130, 246, 0.2)',
                 background: 'rgba(255, 255, 255, 0.05)'
               }}>
-                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80" 
-                  alt="Medical AI technology" 
+                <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80" 
+                  alt="Brain MRI scan and medical AI technology" 
                   style={{
                     width: '100%',
                     height: '100%',
@@ -1970,8 +1970,8 @@ const HealthcareEngagementSection: FC = () => {
                 border: '1px solid rgba(139, 92, 246, 0.2)',
                 background: 'rgba(255, 255, 255, 0.05)'
               }}>
-                <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1600&q=80" 
-                  alt="Healthcare innovation" 
+                <img src="https://images.unsplash.com/photo-1579154392429-0e6b4e850ad2?w=1600&q=80" 
+                  alt="Modern hospital hallway with advanced technology" 
                   style={{
                     width: '100%',
                     height: '100%',
