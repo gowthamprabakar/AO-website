@@ -3767,6 +3767,688 @@ const ManufacturingPage: FC = () => {
   )
 }
 
+// Telecom Page Components
+const TelecomHero: FC = () => {
+  return (
+    <section id="geometric-hero-container" style={{
+      position: 'relative',
+      minHeight: '100vh',
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      overflow: 'hidden',
+      background: '#030303'
+    }}>
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        background: 'radial-gradient(ellipse at top, rgba(139, 92, 246, 0.05), transparent 50%), radial-gradient(ellipse at bottom right, rgba(124, 58, 237, 0.05), transparent 50%)',
+        filter: 'blur(60px)'
+      }}></div>
+
+      <div style={{
+        position: 'relative',
+        zIndex: 10,
+        maxWidth: '1200px',
+        margin: '0 auto',
+        padding: '0 32px',
+        textAlign: 'center'
+      }}>
+        <div class="geometric-content-item geometric-content-item-0" style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '8px',
+          padding: '10px 20px',
+          background: 'rgba(139, 92, 246, 0.08)',
+          border: '1px solid rgba(139, 92, 246, 0.3)',
+          borderRadius: '50px',
+          marginBottom: '48px',
+          boxShadow: '0 0 20px rgba(139, 92, 246, 0.2)'
+        }}>
+          <div style={{
+            width: '8px',
+            height: '8px',
+            borderRadius: '50%',
+            background: '#8B5CF6',
+            boxShadow: '0 0 10px rgba(139, 92, 246, 0.6)'
+          }}></div>
+          <span style={{
+            fontSize: '13px',
+            color: '#8B5CF6',
+            letterSpacing: '0.15em',
+            textTransform: 'uppercase',
+            fontWeight: '600'
+          }}>Connectivity Grid Intelligence</span>
+        </div>
+
+        <h1 class="geometric-content-item geometric-content-item-1" style={{
+          fontSize: 'clamp(40px, 8vw, 96px)',
+          fontWeight: '700',
+          marginBottom: '32px',
+          lineHeight: '1.1',
+          letterSpacing: '-0.02em'
+        }}>
+          <span style={{
+            background: 'linear-gradient(to bottom, white, rgba(255, 255, 255, 0.8))',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}>From Network Alerts to</span>
+          <br />
+          <span style={{
+            background: 'linear-gradient(90deg, #8B5CF6, rgba(255, 255, 255, 0.9), #8B5CF6)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}>Self-Healing Networks</span>
+        </h1>
+
+        <p class="geometric-content-item geometric-content-item-2" style={{
+          fontSize: 'clamp(16px, 2vw, 20px)',
+          color: 'rgba(255, 255, 255, 0.6)',
+          marginBottom: '48px',
+          lineHeight: '1.7',
+          maxWidth: '800px',
+          margin: '0 auto 48px'
+        }}>
+          Deploy autonomous AI agents across network operations, AIOps, 5G slicing, and predictive maintenance—measured in uptime and performance, not tickets.
+        </p>
+
+        <div class="geometric-content-item geometric-content-item-2" style={{
+          display: 'inline-block',
+          background: 'rgba(40, 20, 50, 0.6)',
+          backdropFilter: 'blur(20px)',
+          border: '1px solid rgba(139, 92, 246, 0.3)',
+          borderRadius: '24px',
+          padding: '40px 80px',
+          marginTop: '24px',
+          boxShadow: '0 8px 32px rgba(139, 92, 246, 0.15), inset 0 1px 0 rgba(139, 92, 246, 0.1)'
+        }}>
+          <div style={{
+            fontSize: '80px',
+            fontWeight: '700',
+            color: '#8B5CF6',
+            lineHeight: '1',
+            marginBottom: '12px',
+            textShadow: '0 0 30px rgba(139, 92, 246, 0.5)'
+          }}>99.99%</div>
+          <div style={{
+            fontSize: '20px',
+            color: 'white',
+            fontWeight: '600',
+            marginBottom: '6px',
+            letterSpacing: '0.02em'
+          }}>Network Availability</div>
+          <div style={{
+            fontSize: '15px',
+            color: 'rgba(255, 255, 255, 0.6)',
+            letterSpacing: '0.05em'
+          }}>AI-Driven Operations</div>
+        </div>
+      </div>
+
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        background: 'linear-gradient(to top, #030303, transparent, rgba(3, 3, 3, 0.8))',
+        pointerEvents: 'none'
+      }}></div>
+    </section>
+  )
+}
+
+// Telecom Solutions Section - Grid Layout
+const TelecomSolutionsSection: FC = () => {
+  const solutions = [
+    {
+      icon: 'fa-brain',
+      title: 'AIOps Platform',
+      description: 'Autonomous network operations with predictive intelligence. Detect, diagnose, and resolve issues before they impact customers.',
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80',
+      tags: ['Anomaly Detection', 'Root Cause Analysis', 'Auto-Remediation'],
+      metric: '85% Faster MTTR',
+      color: '#8B5CF6'
+    },
+    {
+      icon: 'fa-network-wired',
+      title: '5G Network Slicing',
+      description: 'Dynamic resource allocation and optimization for 5G network slices. Ensure SLA compliance with AI-driven orchestration.',
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80',
+      tags: ['5G Core', 'Dynamic Allocation', 'SLA Management'],
+      metric: '40% Resource Efficiency',
+      color: '#7C3AED'
+    },
+    {
+      icon: 'fa-shield-alt',
+      title: 'Threat Detection Engine',
+      description: 'Real-time security monitoring with ML-powered threat detection. Protect infrastructure from DDoS, intrusions, and anomalies.',
+      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80',
+      tags: ['DDoS Protection', 'Intrusion Detection', 'Security Analytics'],
+      metric: '99.8% Threat Detection',
+      color: '#8B5CF6'
+    },
+    {
+      icon: 'fa-chart-line',
+      title: 'Predictive Capacity Planning',
+      description: 'Forecast network demand and optimize capacity allocation. Prevent congestion with intelligent traffic management.',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+      tags: ['Traffic Forecasting', 'Load Balancing', 'Optimization'],
+      metric: '30% Cost Reduction',
+      color: '#7C3AED'
+    },
+    {
+      icon: 'fa-cog',
+      title: 'Automated Provisioning',
+      description: 'Zero-touch service provisioning and configuration. Deploy new services and updates across the network instantly.',
+      image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80',
+      tags: ['Zero-Touch', 'Configuration Management', 'Orchestration'],
+      metric: '10x Faster Deployment',
+      color: '#8B5CF6'
+    },
+    {
+      icon: 'fa-satellite-dish',
+      title: 'IoT Device Management',
+      description: 'Manage millions of IoT devices with AI-powered lifecycle management. Monitor health, update firmware, and optimize connectivity.',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80',
+      tags: ['Device Management', 'Firmware Updates', 'IoT Analytics'],
+      metric: '50M+ Devices',
+      color: '#7C3AED'
+    },
+    {
+      icon: 'fa-server',
+      title: 'Edge Computing Optimization',
+      description: 'Intelligent workload distribution across edge nodes. Minimize latency with AI-driven edge orchestration.',
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80',
+      tags: ['Edge AI', 'Workload Distribution', 'Latency Optimization'],
+      metric: '<10ms Latency',
+      color: '#8B5CF6'
+    },
+    {
+      icon: 'fa-users',
+      title: 'Customer Experience Analytics',
+      description: 'Real-time quality of experience monitoring. Identify and resolve customer issues proactively with AI insights.',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+      tags: ['QoE Monitoring', 'Churn Prediction', 'Sentiment Analysis'],
+      metric: '95% Customer Satisfaction',
+      color: '#7C3AED'
+    }
+  ];
+
+  return (
+    <section style={{
+      padding: '120px 32px',
+      background: '#050505',
+      position: 'relative'
+    }}>
+      <div style={{
+        maxWidth: '1400px',
+        margin: '0 auto'
+      }}>
+        <div style={{
+          textAlign: 'center',
+          marginBottom: '80px'
+        }}>
+          <h2 style={{
+            fontSize: 'clamp(36px, 5vw, 56px)',
+            fontWeight: '700',
+            color: 'white',
+            marginBottom: '16px'
+          }}>Telecom AI Solutions</h2>
+          <p style={{
+            fontSize: '18px',
+            color: 'rgba(255, 255, 255, 0.6)',
+            maxWidth: '600px',
+            margin: '0 auto'
+          }}>Autonomous intelligence for next-generation networks</p>
+        </div>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+          gap: '24px'
+        }}>
+          {solutions.map((solution, index) => (
+            <div key={index} style={{
+              position: 'relative',
+              padding: '32px',
+              background: 'rgba(255, 255, 255, 0.02)',
+              backdropFilter: 'blur(20px)',
+              border: '1px solid rgba(255, 255, 255, 0.08)',
+              borderRadius: '20px',
+              transition: 'all 0.3s',
+              cursor: 'pointer',
+              overflow: 'hidden'
+            }}
+            class="telecom-solution-card">
+              <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                height: '120px',
+                backgroundImage: `url(${solution.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                opacity: '0.15',
+                filter: 'blur(2px)'
+              }}></div>
+
+              <div style={{
+                position: 'relative',
+                zIndex: 1
+              }}>
+                <div style={{
+                  width: '56px',
+                  height: '56px',
+                  borderRadius: '12px',
+                  background: `${solution.color}20`,
+                  border: `1px solid ${solution.color}40`,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginBottom: '20px'
+                }}>
+                  <i class={`fas ${solution.icon}`} style={{ 
+                    fontSize: '24px', 
+                    color: solution.color 
+                  }}></i>
+                </div>
+
+                <div style={{
+                  display: 'inline-block',
+                  padding: '4px 12px',
+                  background: `${solution.color}20`,
+                  border: `1px solid ${solution.color}40`,
+                  borderRadius: '6px',
+                  fontSize: '11px',
+                  fontWeight: '600',
+                  color: solution.color,
+                  marginBottom: '16px'
+                }}>{solution.metric}</div>
+
+                <h3 style={{
+                  fontSize: '20px',
+                  fontWeight: '600',
+                  color: 'white',
+                  marginBottom: '12px'
+                }}>{solution.title}</h3>
+
+                <p style={{
+                  fontSize: '14px',
+                  color: 'rgba(255, 255, 255, 0.6)',
+                  lineHeight: '1.6',
+                  marginBottom: '20px'
+                }}>{solution.description}</p>
+
+                <div style={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: '8px'
+                }}>
+                  {solution.tags.map(tag => (
+                    <span key={tag} style={{
+                      padding: '4px 10px',
+                      background: 'rgba(255, 255, 255, 0.05)',
+                      border: '1px solid rgba(255, 255, 255, 0.1)',
+                      borderRadius: '6px',
+                      fontSize: '11px',
+                      color: 'rgba(255, 255, 255, 0.7)'
+                    }}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <style>{`
+        .telecom-solution-card:hover {
+          transform: translateY(-4px);
+          border-color: rgba(139, 92, 246, 0.3);
+          background: rgba(255, 255, 255, 0.04);
+        }
+      `}</style>
+    </section>
+  )
+}
+
+// Telecom Engagement Section
+const TelecomEngagementSection: FC = () => {
+  return (
+    <section style={{
+      position: 'relative',
+      paddingTop: '96px',
+      paddingBottom: '96px',
+      marginTop: '96px',
+      zIndex: 10
+    }}>
+      <div style={{
+        maxWidth: '1280px',
+        margin: '0 auto',
+        padding: '0 24px'
+      }}>
+        <div style={{
+          display: 'grid',
+          gap: '48px',
+          gridTemplateColumns: '1fr',
+          alignItems: 'start'
+        }}
+        class="lg:grid-cols-2">
+          <div style={{ 
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '24px'
+          }}>
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              borderRadius: '50px',
+              background: 'rgba(139, 92, 246, 0.1)',
+              border: '1px solid rgba(139, 92, 246, 0.2)',
+              padding: '6px 12px',
+              backdropFilter: 'blur(12px)',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.1s both'
+            }}>
+              <span style={{
+                fontSize: '12px',
+                color: 'rgba(139, 92, 246, 0.9)',
+                fontWeight: '500',
+                letterSpacing: '0.05em'
+              }}>Powering 100+ telecom operators globally</span>
+              <span style={{
+                display: 'inline-flex',
+                width: '20px',
+                height: '20px',
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderRadius: '50%',
+                background: 'rgba(255, 255, 255, 0.1)'
+              }}>
+                <i class="fas fa-arrow-right" style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}></i>
+              </span>
+            </div>
+
+            <h2 style={{
+              marginTop: '20px',
+              fontSize: 'clamp(32px, 4vw, 48px)',
+              fontWeight: '700',
+              lineHeight: '1.1',
+              color: 'white',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.2s both'
+            }}>
+              We transform network complexity into autonomous intelligence
+            </h2>
+
+            <p style={{
+              fontSize: '17px',
+              lineHeight: '1.7',
+              color: 'rgba(255, 255, 255, 0.7)',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.3s both'
+            }}>
+              Our AI agents operate 24/7 across your network infrastructure, from core to edge, ensuring peak performance and reliability.
+            </p>
+
+            <div style={{
+              display: 'flex',
+              gap: '12px',
+              flexWrap: 'wrap',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.4s both'
+            }}>
+              <a href="/deploy" style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '14px 28px',
+                background: '#8B5CF6',
+                color: 'white',
+                borderRadius: '50px',
+                fontSize: '15px',
+                fontWeight: '600',
+                textDecoration: 'none',
+                transition: 'all 0.3s'
+              }}
+              class="telecom-primary-btn">
+                Schedule Consultation
+                <i class="fas fa-arrow-right" style={{ fontSize: '14px' }}></i>
+              </a>
+
+              <a href="/trust" style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '14px 28px',
+                background: 'rgba(139, 92, 246, 0.1)',
+                color: '#8B5CF6',
+                border: '1px solid rgba(139, 92, 246, 0.3)',
+                borderRadius: '50px',
+                fontSize: '15px',
+                fontWeight: '600',
+                textDecoration: 'none',
+                transition: 'all 0.3s'
+              }}
+              class="telecom-secondary-btn">
+                Our Compliance
+                <i class="fas fa-shield-alt" style={{ fontSize: '14px' }}></i>
+              </a>
+            </div>
+
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr',
+              gap: '24px',
+              marginTop: '16px',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.5s both'
+            }}>
+              <div style={{
+                padding: '20px',
+                background: 'rgba(139, 92, 246, 0.05)',
+                border: '1px solid rgba(139, 92, 246, 0.15)',
+                borderRadius: '16px'
+              }}>
+                <div style={{
+                  fontSize: '32px',
+                  fontWeight: '700',
+                  color: '#8B5CF6',
+                  marginBottom: '4px'
+                }}>10B+</div>
+                <div style={{
+                  fontSize: '13px',
+                  color: 'rgba(255, 255, 255, 0.6)'
+                }}>Network events processed</div>
+              </div>
+
+              <div style={{
+                padding: '20px',
+                background: 'rgba(139, 92, 246, 0.05)',
+                border: '1px solid rgba(139, 92, 246, 0.15)',
+                borderRadius: '16px'
+              }}>
+                <div style={{
+                  fontSize: '32px',
+                  fontWeight: '700',
+                  color: '#8B5CF6',
+                  marginBottom: '4px'
+                }}>99.99%</div>
+                <div style={{
+                  fontSize: '13px',
+                  color: 'rgba(255, 255, 255, 0.6)'
+                }}>Service availability SLA</div>
+              </div>
+            </div>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '16px',
+            animation: 'fadeSlideIn 0.5s ease-in-out 0.6s both'
+          }}>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr',
+              gap: '16px'
+            }}>
+              <div style={{
+                height: '240px',
+                borderRadius: '20px',
+                overflow: 'hidden',
+                border: '1px solid rgba(139, 92, 246, 0.3)',
+                position: 'relative',
+                background: 'rgba(139, 92, 246, 0.05)'
+              }}>
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&q=80" 
+                  alt="5G Network Infrastructure"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    opacity: '0.7'
+                  }} />
+                <div style={{
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  padding: '20px',
+                  background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent)'
+                }}>
+                  <div style={{
+                    padding: '4px 10px',
+                    background: 'rgba(139, 92, 246, 0.8)',
+                    borderRadius: '6px',
+                    fontSize: '11px',
+                    fontWeight: '600',
+                    color: 'white',
+                    display: 'inline-block',
+                    marginBottom: '8px'
+                  }}>5G Ready</div>
+                  <div style={{
+                    fontSize: '14px',
+                    color: 'white',
+                    fontWeight: '500'
+                  }}>Next-Gen Network Slicing</div>
+                </div>
+              </div>
+
+              <div style={{
+                height: '240px',
+                borderRadius: '20px',
+                overflow: 'hidden',
+                border: '1px solid rgba(124, 58, 237, 0.3)',
+                position: 'relative',
+                background: 'rgba(124, 58, 237, 0.05)'
+              }}>
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80" 
+                  alt="Network Operations Center"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    opacity: '0.7'
+                  }} />
+                <div style={{
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  padding: '20px',
+                  background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent)'
+                }}>
+                  <div style={{
+                    padding: '4px 10px',
+                    background: 'rgba(124, 58, 237, 0.8)',
+                    borderRadius: '6px',
+                    fontSize: '11px',
+                    fontWeight: '600',
+                    color: 'white',
+                    display: 'inline-block',
+                    marginBottom: '8px'
+                  }}>AIOps Powered</div>
+                  <div style={{
+                    fontSize: '14px',
+                    color: 'white',
+                    fontWeight: '500'
+                  }}>Autonomous Operations</div>
+                </div>
+              </div>
+            </div>
+
+            <div style={{
+              height: '200px',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              border: '1px solid rgba(139, 92, 246, 0.3)',
+              position: 'relative',
+              background: 'rgba(139, 92, 246, 0.05)'
+            }}>
+              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80" 
+                alt="Edge Computing Network"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  opacity: '0.7'
+                }} />
+              <div style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                right: 0,
+                padding: '20px',
+                background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent)'
+              }}>
+                <div style={{
+                  padding: '4px 10px',
+                  background: 'rgba(139, 92, 246, 0.8)',
+                  borderRadius: '6px',
+                  fontSize: '11px',
+                  fontWeight: '600',
+                  color: 'white',
+                  display: 'inline-block',
+                  marginBottom: '8px'
+                }}>Edge Intelligence</div>
+                <div style={{
+                  fontSize: '14px',
+                  color: 'white',
+                  fontWeight: '500'
+                }}>Low-Latency Edge Computing</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        .telecom-primary-btn:hover {
+          background: #7C3AED;
+          transform: translateY(-2px);
+          box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+        }
+
+        .telecom-secondary-btn:hover {
+          background: rgba(139, 92, 246, 0.15);
+          border-color: rgba(139, 92, 246, 0.5);
+        }
+      `}</style>
+    </section>
+  )
+}
+
+// Telecom Page Layout
+const TelecomPage: FC = () => {
+  return (
+    <Layout>
+      <FloatingNav />
+      <TelecomHero />
+      <TelecomSolutionsSection />
+      <TelecomEngagementSection />
+      <Footer />
+      <script src="/static/geometric-hero.js" defer></script>
+    </Layout>
+  )
+}
+
 // Routes
 app.get('/', (c) => {
   return c.html(<Home />)
@@ -3782,6 +4464,10 @@ app.get('/insurance', (c) => {
 
 app.get('/manufacturing', (c) => {
   return c.html(<ManufacturingPage />)
+})
+
+app.get('/telecom', (c) => {
+  return c.html(<TelecomPage />)
 })
 
 export default app
