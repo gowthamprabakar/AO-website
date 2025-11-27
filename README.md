@@ -91,13 +91,81 @@
   - **Ambient Clinical Scribe**: AI documentation (2hrs saved per shift)
   - **Autonomous Revenue Cycle**: Cognition coding & denial management
   - **Clinical Trial Data Fabric**: Regulatory-ready clinical evidence system
-- Interactive cards with tech tags, metrics, and hover effects
+- **Healthcare Engagement Section** - Text left, images right layout
+  - Badge: "Transforming healthcare in 50+ institutions"
+  - Headline and description
+  - CTA buttons: "Schedule Consultation" and "Our Compliance"
+  - Key metrics: 50M+ Patient interactions, 99.9% Clinical accuracy
+  - Visual cards: HIPAA-First Architecture, Evidence-Based AI, Real-Time Intelligence
 - Accessible at `/healthcare` route
 
+### ✅ Insurance (Risk & Capital) Page
+- **Geometric Hero Section** - Blue theme with floating shapes
+  - "From Manual Underwriting to Predictive Precision" headline
+  - "Risk & Capital Intelligence" badge
+  - "70% Faster Claims Processing" stat card
+- **Solution Matrix** - 8 insurance AI solutions:
+  - **Automated Risk Assessment**: Underwriting automation with 99.5% accuracy
+  - **Intelligent Claims Automation**: Process claims 10x faster
+  - **Anomaly Detection Engine**: Fraud detection with $50M+ saved
+  - **AI Claims Assistant**: Virtual assistant reducing handle time 40%
+  - **Dynamic Pricing Engine**: Real-time risk-based pricing
+  - **Compliance Monitor**: Auto-regulatory compliance tracking
+  - **Predictive Loss Modeling**: Forecast losses with 95% accuracy
+  - **Reinsurance Optimizer**: Optimize reinsurance placement
+- **Insurance Engagement Section** - Text left, images right layout
+  - Badge: "Trusted by 50+ insurance carriers"
+  - Headline: "We turn uncertainty into assured outcomes"
+  - Key metrics: 100M+ claims processed, $50B+ premiums optimized
+  - Visual cards: Predictive Underwriting, Fraud Detection, Automated Claims
+- Accessible at `/insurance` route
+
+### ✅ Manufacturing (Physical Operations) Page
+- **Geometric Hero Section** - Orange theme with floating shapes
+  - "From Reactive Maintenance to Predictive Operations" headline
+  - "Physical Operations Intelligence" badge
+  - "40% Reduction in Downtime" stat card
+- **Manufacturing Features** - 4 alternating feature blocks with large images:
+  - **Digital Twin Platform**: Virtual replicas with 99.5% simulation accuracy
+  - **Predictive Maintenance AI**: 40% downtime reduction with AI forecasting
+  - **Quality Control Vision**: 99.9% defect detection with computer vision
+  - **Supply Chain Optimizer**: 30% inventory reduction with optimization
+- **Additional Capabilities** - 6 solution cards in grid:
+  - Robotic Process Automation
+  - Production Analytics
+  - Safety Monitoring
+  - Energy Optimization
+  - Warehouse Intelligence
+  - Workforce Optimization
+- **Manufacturing Engagement Section** - Text left, images right layout
+  - Badge: "Trusted by 500+ manufacturers worldwide"
+  - Headline: "We turn manufacturing complexity into predictive intelligence"
+  - Key metrics: Real-time OEE monitoring, 24/7 autonomous operations
+  - Visual cards showcasing factory automation and AI systems
+- Accessible at `/manufacturing` route
+
+### ✅ Telecom (Connectivity Grid) Page
+- **Geometric Hero Section** - Purple theme with floating shapes
+  - "From Network Alerts to Self-Healing Networks" headline
+  - "Connectivity Grid Intelligence" badge
+  - "99.99% Network Availability" stat card
+- **Solution Matrix** - 8 telecom AI solutions:
+  - **AIOps Platform**: 85% faster MTTR with autonomous operations
+  - **5G Network Slicing**: 40% resource efficiency with dynamic allocation
+  - **Threat Detection Engine**: 99.8% threat detection rate
+  - **Predictive Capacity Planning**: 30% cost reduction with forecasting
+  - **Automated Provisioning**: 10x faster deployment with zero-touch
+  - **IoT Device Management**: Manage 50M+ devices with AI
+  - **Edge Computing Optimization**: <10ms latency with edge AI
+  - **Customer Experience Analytics**: 95% customer satisfaction with QoE monitoring
+- **Telecom Engagement Section** - Text left, images right layout
+  - Badge: "Powering 100+ telecom operators globally"
+  - Headline: "We transform network complexity into autonomous intelligence"
+  - Key metrics: 10B+ network events processed, 99.99% service availability SLA
+  - Visual cards: 5G Ready, AIOps Powered, Edge Intelligence
+- Accessible at `/telecom` route
+
 ## Features Not Yet Implemented
-- [ ] Insurance page with 20 use cases
-- [ ] Manufacturing page with 20 use cases
-- [ ] Telecom page with 20 use cases
 - [ ] Playground interactive demo page
 - [ ] Manifesto page
 - [ ] Trust Center page with compliance details
