@@ -7,7 +7,7 @@
 
 ## Live URLs
 - **Development**: https://3000-i4xhkcfuemzg3k9qu6deg-de59bda9.sandbox.novita.ai
-- **GitHub**: (To be added after GitHub push)
+- **GitHub**: https://github.com/gowthamprabakar/AO-website
 - **Production**: (To be added after Cloudflare deployment)
 
 ## Currently Completed Features
