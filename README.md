@@ -25,6 +25,16 @@
   - Insurance (Risk & Capital) - Blue theme
   - Manufacturing (Physical Ops) - Orange theme
   - Telecom (Connectivity) - Purple theme
+- **Crafting Digital Experiences Section** - Full-width hero with background image
+  - Award-winning design trust badge
+  - Large headline "Crafting Digital Experiences That Matter"
+  - Two CTA buttons: "View Portfolio" and "Watch Showreel"
+  - Stats card with 150+ Projects Delivered metric
+  - Client Satisfaction progress bar (100%)
+  - Mini stats: 5+ Years, 24/7 Support, 100% Quality
+  - Compliance badges: HIPAA Compliant, SOC 2 Type II
+  - "Powered By" card with animated marquee showing tech partners:
+    - VERTEX AI, PYTORCH, SNOWFLAKE, TENSORFLOW, NVIDIA
 - **Footer Section** - Comprehensive footer with:
   - Large "Ready to architect assured outcomes?" headline
   - Contact email: hello@assuredoutcomes.ai
