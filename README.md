@@ -14,6 +14,13 @@
 
 ### ✅ Home Page
 - **Floating Navigation Bar** - Fixed top navigation with smooth backdrop blur
+  - **Intelligence Modal** - Interactive popup displaying 4 industry categories
+    - Click "Intelligence" button to open modal
+    - Glassmorphism overlay with backdrop blur
+    - 4 industry cards: Healthcare, Insurance, Manufacturing, Telecom
+    - Click any card to navigate to that industry page
+    - Close with ESC key or click outside
+    - Smooth fade-in animations
 - **Hero Section** - Full-screen hero with **WebGL animated shader background**
   - Interactive WebGL canvas with fluid animation effects
   - Mouse/pointer tracking for interactive visuals
@@ -105,7 +112,12 @@ webapp/
 │   └── renderer.tsx       # JSX renderer config
 ├── public/
 │   └── static/
-│       └── globals.css    # Global styles and animations
+│       ├── globals.css            # Global styles and animations
+│       ├── shader-hero.js         # WebGL animated shader background
+│       ├── orbital-timeline.js    # Interactive orbital visualization
+│       ├── orbital-timeline.css   # Orbital styles
+│       ├── shooting-stars.js      # Animated starfield effect
+│       └── intelligence-modal.js  # Industry selection modal
 ├── dist/                  # Build output (auto-generated)
 ├── ecosystem.config.cjs   # PM2 configuration
 ├── package.json           # Dependencies and scripts
