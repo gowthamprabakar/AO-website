@@ -14,12 +14,15 @@
 
 ### ✅ Home Page
 - **Floating Navigation Bar** - Fixed top navigation with smooth backdrop blur
-- **Hero Section** - Full-screen hero with animated gradient background
-  - Trust badge (SOC2 Type II Certified)
-  - Large gradient headline "We Architect Assured Outcomes"
-  - Subtitle describing 80+ AI agents
+- **Hero Section** - Full-screen hero with **WebGL animated shader background**
+  - Interactive WebGL canvas with fluid animation effects
+  - Mouse/pointer tracking for interactive visuals
+  - Trust badge (SOC2 Type II Certified) with fade-in animation
+  - Large gradient headline "We Architect Assured Outcomes" with staggered animations
+  - Subtitle describing 80+ AI agents with delayed fade-in
   - Two CTA buttons: "Deploy Intelligence" and "Enter Playground"
   - Stats panel showing: 80+ Agents, 4 Industries, Zero Touch, 50% Faster
+  - Smooth entrance animations for all elements
 - **Intelligence by Industry Section** - Bento grid showcasing 4 industries:
   - Healthcare (Biologic Intelligence) - Green theme
   - Insurance (Risk & Capital) - Blue theme
@@ -182,6 +185,15 @@ git log --oneline
 - CSS animations for performance (can be enhanced with Framer Motion)
 - No build-time React needed - pure Hono JSX
 - Cloudflare Pages compatible - no Node.js runtime dependencies
+- **WebGL Shader Background** - Client-side WebGL2 implementation:
+  - Pure JavaScript (no React dependencies)
+  - Interactive pointer tracking and visual effects
+  - Fractal noise-based cloud animations
+  - Custom GLSL fragment shaders for visual effects
+  - Optimized for performance with requestAnimationFrame
+  - Device pixel ratio handling for crisp rendering
+  - Automatic canvas resizing on window resize
+  - Touch-enabled for mobile devices
 
 ## Dependencies
 - **hono**: ^4.10.7 - Lightweight web framework
