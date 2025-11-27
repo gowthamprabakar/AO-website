@@ -649,6 +649,300 @@ const Footer: FC = () => {
   )
 }
 
+// Crafting Digital Experiences Section
+const CraftingExperiencesSection: FC = () => {
+  return (
+    <section style={{
+      position: 'relative',
+      padding: '96px 32px',
+      backgroundImage: 'url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a72ca2f3-9dd1-4fe4-84ba-fe86468a5237_3840w.webp?w=800&q=80)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      WebkitMaskImage: 'linear-gradient(180deg, transparent, black 0%, black 70%, transparent)',
+      maskImage: 'linear-gradient(180deg, transparent, black 0%, black 70%, transparent)'
+    }}>
+      <div style={{
+        maxWidth: '1400px',
+        margin: '80px auto 160px',
+        padding: '0 16px'
+      }}>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr',
+          gap: '32px',
+          alignItems: 'start'
+        }}
+        class="lg:grid-cols-12 lg:gap-12">
+          {/* Left Column */}
+          <div style={{
+            gridColumn: 'span 7 / span 7',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '24px'
+          }}>
+            {/* Trust Badge */}
+            <div>
+              <div style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '8px 16px',
+                background: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(12px)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                borderRadius: '9999px'
+              }}>
+                <span style={{
+                  fontSize: '11px',
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(255, 255, 255, 0.7)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px'
+                }}>
+                  AWARD-WINNING DESIGN
+                  <i class="fas fa-award" style={{ color: '#00FF94' }}></i>
+                </span>
+              </div>
+            </div>
+
+            {/* Headline */}
+            <h2 style={{
+              fontSize: 'clamp(36px, 8vw, 96px)',
+              lineHeight: '0.9',
+              fontWeight: '500',
+              letterSpacing: '-0.02em',
+              WebkitMaskImage: 'linear-gradient(150deg, transparent, black 0%, black 40%, transparent)',
+              maskImage: 'linear-gradient(150deg, transparent, black 0%, black 40%, transparent)'
+            }}>
+              Crafting Digital<br />
+              <span class="gradient-text">Experiences</span><br />
+              That Matter
+            </h2>
+
+            {/* Description */}
+            <p style={{
+              fontSize: 'clamp(16px, 2vw, 18px)',
+              lineHeight: '1.6',
+              color: 'rgba(255, 255, 255, 0.7)',
+              maxWidth: '600px'
+            }}>
+              We design interfaces that combine beauty with functionality, creating valuable experiences that users love and businesses thrive on.
+            </p>
+
+            {/* CTA Buttons */}
+            <div style={{
+              display: 'flex',
+              gap: '16px',
+              flexWrap: 'wrap'
+            }}>
+              <button style={{
+                background: 'white',
+                color: '#050505',
+                padding: '16px 32px',
+                borderRadius: '50px',
+                fontSize: '14px',
+                fontWeight: '600',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                transition: 'all 0.3s',
+                border: 'none',
+                cursor: 'pointer',
+                boxShadow: '5.7px 5.7px 8.6px rgba(0, 0, 0, 0.07), 13.7px 13.7px 10.9px rgba(0, 0, 0, 0.099), 25.7px 25.7px 20.5px rgba(0, 0, 0, 0.123), 45.8px 45.8px 36.6px rgba(0, 0, 0, 0.147), 85.8px 85.8px 68.5px rgba(0, 0, 0, 0.176), 205px 205px 163.4px rgba(0, 0, 0, 0.246)'
+              }}>
+                View Portfolio
+                <i class="fas fa-arrow-right"></i>
+              </button>
+              <button style={{
+                background: 'rgba(255, 255, 255, 0.05)',
+                color: 'rgba(255, 255, 255, 0.9)',
+                padding: '16px 32px',
+                borderRadius: '50px',
+                fontSize: '14px',
+                fontWeight: '600',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                transition: 'all 0.3s',
+                cursor: 'pointer'
+              }}>
+                <i class="fas fa-video"></i>
+                Watch Showreel
+              </button>
+            </div>
+          </div>
+
+          {/* Right Column - Cards */}
+          <div style={{
+            gridColumn: 'span 5 / span 5',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '24px'
+          }}>
+            {/* Stats Card */}
+            <div style={{
+              background: 'linear-gradient(135deg, rgba(15, 15, 35, 0.9) 0%, rgba(15, 15, 35, 0.5) 50%, rgba(15, 15, 35, 0.9) 100%)',
+              backdropFilter: 'blur(24px)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              borderRadius: '24px',
+              padding: '32px',
+              position: 'relative',
+              boxShadow: '0px 0px 30px rgba(0,255,148,0.1)'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
+                <div style={{
+                  width: '48px',
+                  height: '48px',
+                  borderRadius: '16px',
+                  background: 'rgba(0, 255, 148, 0.1)',
+                  border: '1px solid rgba(0, 255, 148, 0.2)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <i class="fas fa-rocket" style={{ color: '#00FF94', fontSize: '20px' }}></i>
+                </div>
+                <div>
+                  <div style={{ fontSize: '32px', fontWeight: '500', color: 'white' }}>150+</div>
+                  <div style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.7)' }}>Projects Delivered</div>
+                </div>
+              </div>
+
+              <div style={{ marginBottom: '24px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
+                  <span style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.7)' }}>Client Satisfaction</span>
+                  <span style={{ fontSize: '14px', color: '#00FF94' }}>100%</span>
+                </div>
+                <div style={{ height: '8px', background: 'rgba(255, 255, 255, 0.1)', borderRadius: '9999px', overflow: 'hidden' }}>
+                  <div style={{ height: '100%', width: '100%', background: 'linear-gradient(90deg, #00FF94, #00D47F)', borderRadius: '9999px' }}></div>
+                </div>
+              </div>
+
+              <div style={{ height: '1px', width: '100%', background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent)', margin: '16px 0' }}></div>
+
+              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '8px' }}>
+                <div style={{ textAlign: 'center', flex: 1, padding: '8px', borderRadius: '16px', transition: 'all 0.3s', cursor: 'pointer' }}
+                  onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                  onmouseout="this.style.background='transparent'">
+                  <div style={{
+                    fontSize: '24px',
+                    fontWeight: '500',
+                    background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8))',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent'
+                  }}>5+</div>
+                  <div style={{ fontSize: '11px', color: 'rgba(255, 255, 255, 0.7)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Years</div>
+                </div>
+                <div style={{ width: '1px', background: 'linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.2), transparent)' }}></div>
+                <div style={{ textAlign: 'center', flex: 1, padding: '8px', borderRadius: '16px', transition: 'all 0.3s', cursor: 'pointer' }}
+                  onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                  onmouseout="this.style.background='transparent'">
+                  <div style={{
+                    fontSize: '24px',
+                    fontWeight: '500',
+                    background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8))',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent'
+                  }}>24/7</div>
+                  <div style={{ fontSize: '11px', color: 'rgba(255, 255, 255, 0.7)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Support</div>
+                </div>
+                <div style={{ width: '1px', background: 'linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.2), transparent)' }}></div>
+                <div style={{ textAlign: 'center', flex: 1, padding: '8px', borderRadius: '16px', transition: 'all 0.3s', cursor: 'pointer' }}
+                  onmouseover="this.style.background='rgba(255,255,255,0.05)'"
+                  onmouseout="this.style.background='transparent'">
+                  <div style={{
+                    fontSize: '24px',
+                    fontWeight: '500',
+                    background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8))',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent'
+                  }}>100%</div>
+                  <div style={{ fontSize: '11px', color: 'rgba(255, 255, 255, 0.7)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Quality</div>
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '16px' }}>
+                <span style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '4px',
+                  fontSize: '11px',
+                  padding: '6px 12px',
+                  borderRadius: '9999px',
+                  background: 'rgba(0, 255, 148, 0.1)',
+                  border: '1px solid rgba(0, 255, 148, 0.2)',
+                  color: '#00FF94'
+                }}>
+                  <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#00FF94', animation: 'pulse 2s ease-in-out infinite' }}></div>
+                  HIPAA COMPLIANT
+                </span>
+                <span style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '4px',
+                  fontSize: '11px',
+                  padding: '6px 12px',
+                  borderRadius: '9999px',
+                  background: 'rgba(59, 130, 246, 0.1)',
+                  border: '1px solid rgba(59, 130, 246, 0.2)',
+                  color: '#93C5FD'
+                }}>
+                  SOC 2 TYPE II
+                </span>
+              </div>
+            </div>
+
+            {/* Partners/Powered By Card */}
+            <div style={{
+              background: 'linear-gradient(135deg, rgba(15, 15, 35, 0.9) 0%, rgba(15, 15, 35, 0.5) 50%, rgba(15, 15, 35, 0.9) 100%)',
+              backdropFilter: 'blur(16px)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              borderRadius: '24px',
+              padding: '32px',
+              position: 'relative',
+              boxShadow: '4px 4px 6px rgba(0, 0, 0, 0.049)'
+            }}>
+              <h3 style={{ fontSize: '18px', marginBottom: '16px', color: 'rgba(255, 255, 255, 0.8)' }}>Powered By</h3>
+              <div style={{
+                position: 'relative',
+                overflow: 'hidden',
+                WebkitMaskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)',
+                maskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)'
+              }}>
+                <style>{`
+                  @keyframes marquee-logos {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                  }
+                `}</style>
+                <div style={{ display: 'flex', gap: '24px', animation: 'marquee-logos 30s linear infinite' }}>
+                  <div style={{ display: 'flex', gap: '48px', flexShrink: 0, alignItems: 'center' }}>
+                    <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontFamily: 'monospace', fontSize: '14px', letterSpacing: '0.15em' }}>VERTEX AI</span>
+                    <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontFamily: 'monospace', fontSize: '14px', letterSpacing: '0.15em' }}>PYTORCH</span>
+                    <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontFamily: 'monospace', fontSize: '14px', letterSpacing: '0.15em' }}>SNOWFLAKE</span>
+                    <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontFamily: 'monospace', fontSize: '14px', letterSpacing: '0.15em' }}>TENSORFLOW</span>
+                    <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontFamily: 'monospace', fontSize: '14px', letterSpacing: '0.15em' }}>NVIDIA</span>
+                  </div>
+                  <div style={{ display: 'flex', gap: '48px', flexShrink: 0, alignItems: 'center' }}>
+                    <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontFamily: 'monospace', fontSize: '14px', letterSpacing: '0.15em' }}>VERTEX AI</span>
+                    <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontFamily: 'monospace', fontSize: '14px', letterSpacing: '0.15em' }}>PYTORCH</span>
+                    <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontFamily: 'monospace', fontSize: '14px', letterSpacing: '0.15em' }}>SNOWFLAKE</span>
+                    <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontFamily: 'monospace', fontSize: '14px', letterSpacing: '0.15em' }}>TENSORFLOW</span>
+                    <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontFamily: 'monospace', fontSize: '14px', letterSpacing: '0.15em' }}>NVIDIA</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 // Main Home Page
 const Home: FC = () => {
   return (
@@ -656,6 +950,7 @@ const Home: FC = () => {
       <FloatingNav />
       <Hero />
       <IndustriesSection />
+      <CraftingExperiencesSection />
       <Footer />
     </Layout>
   )
