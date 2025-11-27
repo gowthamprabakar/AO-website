@@ -38,6 +38,23 @@
   - Compliance badges: HIPAA Compliant, SOC 2 Type II
   - "Powered By" card with animated marquee showing tech partners:
     - VERTEX AI, PYTORCH, SNOWFLAKE, TENSORFLOW, NVIDIA
+- **Orbital Timeline Section** - Interactive AI solutions visualization
+  - Split layout: orbital visualization left, description right
+  - 5 orbital nodes representing service categories:
+    - Healthcare AI (20 solutions)
+    - Insurance AI (20 solutions)
+    - Manufacturing AI (20 solutions)
+    - Telecom AI (20 solutions)
+    - Custom Solutions (unlimited)
+  - Auto-rotating orbital animation
+  - Click any node to expand details card
+  - Interactive connections showing related services
+  - Impact level indicators for each offering
+  - Feature highlights with icon cards:
+    - Interconnected Intelligence
+    - Autonomous Operation
+    - Guaranteed Outcomes
+  - CTA buttons: "View All Solutions" and "Schedule Demo"
 - **Footer Section** - Comprehensive footer with:
   - Large "Ready to architect assured outcomes?" headline
   - Contact email: hello@assuredoutcomes.ai
@@ -194,6 +211,16 @@ git log --oneline
   - Device pixel ratio handling for crisp rendering
   - Automatic canvas resizing on window resize
   - Touch-enabled for mobile devices
+- **Orbital Timeline Visualization** - Interactive node-based interface:
+  - Pure JavaScript OOP implementation (OrbitalTimeline class)
+  - Auto-rotating 360° orbital animation
+  - Dynamic node positioning with trigonometry
+  - Z-index and opacity depth effects
+  - Click interaction for node expansion
+  - Related node highlighting with pulse effects
+  - Smooth CSS transitions and animations
+  - Expandable detail cards with backdrop blur
+  - Mobile-friendly touch interactions
 
 ## Dependencies
 - **hono**: ^4.10.7 - Lightweight web framework
