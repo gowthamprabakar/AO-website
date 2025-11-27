@@ -1628,6 +1628,426 @@ const SolutionMatrixSection: FC = () => {
   )
 }
 
+// Healthcare Engagement Section
+const HealthcareEngagementSection: FC = () => {
+  return (
+    <section style={{
+      position: 'relative',
+      paddingTop: '96px',
+      paddingBottom: '96px',
+      marginTop: '96px',
+      zIndex: 10
+    }}>
+      <div style={{
+        maxWidth: '1280px',
+        margin: '0 auto',
+        padding: '0 24px'
+      }}>
+        <div style={{
+          display: 'grid',
+          gap: '40px',
+          gridTemplateColumns: '1fr'
+        }}
+        class="lg:grid-cols-12">
+          {/* Left Content */}
+          <div style={{ gridColumn: 'span 5 / span 5' }}>
+            {/* Badge */}
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              borderRadius: '50px',
+              background: 'rgba(0, 255, 148, 0.1)',
+              border: '1px solid rgba(0, 255, 148, 0.2)',
+              padding: '6px 12px',
+              backdropFilter: 'blur(12px)',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.1s both'
+            }}>
+              <span style={{
+                fontSize: '12px',
+                color: 'rgba(0, 255, 148, 0.9)',
+                fontWeight: '500',
+                letterSpacing: '0.05em'
+              }}>Transforming healthcare in 50+ institutions</span>
+              <span style={{
+                display: 'inline-flex',
+                width: '20px',
+                height: '20px',
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderRadius: '50%',
+                background: 'rgba(255, 255, 255, 0.1)'
+              }}>
+                <i class="fas fa-arrow-right" style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}></i>
+              </span>
+            </div>
+
+            {/* Headline */}
+            <h2 style={{
+              marginTop: '20px',
+              fontSize: 'clamp(32px, 5vw, 56px)',
+              color: 'white',
+              fontWeight: '700',
+              lineHeight: '1.1',
+              letterSpacing: '-0.02em',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.2s both'
+            }}>
+              We turn reactive healthcare into <span style={{
+                background: 'linear-gradient(90deg, #00FF94, #3B82F6)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}>proactive outcomes</span>
+            </h2>
+
+            {/* Description */}
+            <p style={{
+              fontSize: 'clamp(16px, 2vw, 18px)',
+              color: 'rgba(255, 255, 255, 0.7)',
+              maxWidth: '600px',
+              marginTop: '24px',
+              lineHeight: '1.7',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.3s both'
+            }}>
+              Deploy autonomous AI agents across clinical operations, drug discovery, and patient care—measured in lives saved and outcomes improved, not hours logged.
+            </p>
+
+            {/* CTA Buttons */}
+            <div style={{
+              marginTop: '28px',
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'center',
+              gap: '12px',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.4s both'
+            }}>
+              <a href="/deploy" style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: '#00FF94',
+                color: '#000000',
+                borderRadius: '50px',
+                padding: '12px 24px',
+                fontSize: '14px',
+                fontWeight: '600',
+                textDecoration: 'none',
+                border: '1px solid rgba(0, 255, 148, 0.3)',
+                boxShadow: '0 2.8px 2.2px rgba(0, 255, 148, 0.034), 0 6.7px 5.3px rgba(0, 255, 148, 0.048), 0 12.5px 10px rgba(0, 255, 148, 0.06)',
+                transition: 'all 0.3s',
+                cursor: 'pointer'
+              }}
+              onmouseover="this.style.background='rgba(0, 255, 148, 0.9)'"
+              onmouseout="this.style.background='#00FF94'">
+                Schedule Consultation
+                <i class="fas fa-calendar-check" style={{ fontSize: '14px' }}></i>
+              </a>
+              <a href="/trust" style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: 'rgba(255, 255, 255, 0.05)',
+                color: 'rgba(255, 255, 255, 0.8)',
+                borderRadius: '50px',
+                padding: '12px 24px',
+                fontSize: '14px',
+                fontWeight: '500',
+                textDecoration: 'none',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                transition: 'all 0.3s',
+                cursor: 'pointer'
+              }}
+              onmouseover="this.style.background='rgba(255, 255, 255, 0.1)'"
+              onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'">
+                Our Compliance
+                <i class="fas fa-shield-alt" style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.7)' }}></i>
+              </a>
+            </div>
+
+            {/* Metrics */}
+            <div style={{
+              marginTop: '40px',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)',
+              gap: '24px',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.5s both'
+            }}>
+              <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                <div style={{
+                  display: 'flex',
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '8px',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  background: 'rgba(0, 255, 148, 0.1)',
+                  border: '1px solid rgba(0, 255, 148, 0.2)'
+                }}>
+                  <i class="fas fa-heartbeat" style={{ fontSize: '16px', color: '#00FF94' }}></i>
+                </div>
+                <div>
+                  <p style={{
+                    fontSize: 'clamp(24px, 3vw, 32px)',
+                    color: 'white',
+                    fontWeight: '700',
+                    letterSpacing: '-0.02em'
+                  }}>50M+</p>
+                  <p style={{
+                    fontSize: '12px',
+                    color: 'rgba(255, 255, 255, 0.6)',
+                    marginTop: '4px'
+                  }}>Patient interactions processed</p>
+                </div>
+              </div>
+              <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                <div style={{
+                  display: 'flex',
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '8px',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  background: 'rgba(0, 255, 148, 0.1)',
+                  border: '1px solid rgba(0, 255, 148, 0.2)'
+                }}>
+                  <i class="fas fa-check-circle" style={{ fontSize: '16px', color: '#00FF94' }}></i>
+                </div>
+                <div>
+                  <p style={{
+                    fontSize: 'clamp(24px, 3vw, 32px)',
+                    color: 'white',
+                    fontWeight: '700',
+                    letterSpacing: '-0.02em'
+                  }}>99.9%</p>
+                  <p style={{
+                    fontSize: '12px',
+                    color: 'rgba(255, 255, 255, 0.6)',
+                    marginTop: '4px'
+                  }}>Clinical accuracy rate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Visual Grid */}
+          <div style={{ gridColumn: 'span 7 / span 7' }}>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)',
+              gap: '16px',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.55s both'
+            }}>
+              {/* Card 1 */}
+              <div style={{
+                position: 'relative',
+                height: '288px',
+                overflow: 'hidden',
+                borderRadius: '16px',
+                border: '1px solid rgba(0, 255, 148, 0.2)',
+                background: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(12px)'
+              }}>
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" 
+                  alt="Healthcare team collaboration" 
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    opacity: '0.6',
+                    position: 'absolute'
+                  }} />
+                <div style={{
+                  position: 'absolute',
+                  inset: '0',
+                  background: 'linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)'
+                }}></div>
+                <div style={{
+                  position: 'absolute',
+                  bottom: '16px',
+                  left: '16px',
+                  right: '16px'
+                }}>
+                  <div style={{
+                    borderRadius: '12px',
+                    background: 'rgba(0, 0, 0, 0.7)',
+                    backdropFilter: 'blur(12px)',
+                    padding: '16px',
+                    border: '1px solid rgba(0, 255, 148, 0.2)'
+                  }}>
+                    <p style={{
+                      fontSize: '14px',
+                      fontWeight: '600',
+                      color: 'white'
+                    }}>HIPAA-First Architecture</p>
+                    <p style={{
+                      marginTop: '4px',
+                      fontSize: '12px',
+                      color: 'rgba(255, 255, 255, 0.7)'
+                    }}>Security and compliance built into every layer.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div style={{
+                position: 'relative',
+                height: '288px',
+                overflow: 'hidden',
+                borderRadius: '16px',
+                border: '1px solid rgba(59, 130, 246, 0.2)',
+                background: 'rgba(255, 255, 255, 0.05)'
+              }}>
+                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80" 
+                  alt="Medical AI technology" 
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    opacity: '0.6',
+                    position: 'absolute'
+                  }} />
+                <div style={{
+                  position: 'absolute',
+                  inset: '0',
+                  background: 'linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)'
+                }}></div>
+                <div style={{
+                  position: 'absolute',
+                  left: '16px',
+                  top: '16px'
+                }}>
+                  <div style={{
+                    borderRadius: '50px',
+                    background: 'rgba(0, 0, 0, 0.7)',
+                    backdropFilter: 'blur(12px)',
+                    padding: '6px 12px'
+                  }}>
+                    <span style={{
+                      fontSize: '12px',
+                      color: 'rgba(255, 255, 255, 0.8)',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '4px'
+                    }}>
+                      <i class="fas fa-sparkles" style={{ fontSize: '12px', color: 'white' }}></i>
+                      FDA SaMD Ready
+                    </span>
+                  </div>
+                </div>
+                <div style={{
+                  position: 'absolute',
+                  bottom: '16px',
+                  left: '16px',
+                  right: '16px'
+                }}>
+                  <div style={{
+                    borderRadius: '12px',
+                    background: 'rgba(0, 0, 0, 0.7)',
+                    backdropFilter: 'blur(12px)',
+                    padding: '16px',
+                    border: '1px solid rgba(59, 130, 246, 0.2)'
+                  }}>
+                    <p style={{
+                      fontSize: '14px',
+                      fontWeight: '600',
+                      color: 'white'
+                    }}>Evidence-Based AI</p>
+                    <p style={{
+                      marginTop: '4px',
+                      fontSize: '12px',
+                      color: 'rgba(255, 255, 255, 0.7)'
+                    }}>Every recommendation backed by clinical data.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 3 - Full Width */}
+              <div style={{
+                position: 'relative',
+                gridColumn: 'span 2 / span 2',
+                height: '224px',
+                overflow: 'hidden',
+                borderRadius: '16px',
+                border: '1px solid rgba(139, 92, 246, 0.2)',
+                background: 'rgba(255, 255, 255, 0.05)'
+              }}>
+                <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1600&q=80" 
+                  alt="Healthcare innovation" 
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    opacity: '0.5',
+                    position: 'absolute'
+                  }} />
+                <div style={{
+                  position: 'absolute',
+                  inset: '0',
+                  background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent)'
+                }}></div>
+                <div style={{
+                  position: 'absolute',
+                  bottom: '16px',
+                  left: '16px',
+                  right: '16px'
+                }}>
+                  <div style={{
+                    display: 'flex',
+                    borderRadius: '12px',
+                    background: 'rgba(0, 0, 0, 0.7)',
+                    padding: '16px',
+                    backdropFilter: 'blur(12px)',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    border: '1px solid rgba(139, 92, 246, 0.2)'
+                  }}>
+                    <div>
+                      <p style={{
+                        fontSize: '14px',
+                        fontWeight: '600',
+                        color: 'white'
+                      }}>Real-Time Clinical Intelligence</p>
+                      <p style={{
+                        marginTop: '4px',
+                        fontSize: '12px',
+                        color: 'rgba(255, 255, 255, 0.7)'
+                      }}>From patient intake to discharge planning.</p>
+                    </div>
+                    <span style={{
+                      display: 'inline-flex',
+                      width: '36px',
+                      height: '36px',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      borderRadius: '8px',
+                      background: 'rgba(255, 255, 255, 0.1)'
+                    }}>
+                      <i class="fas fa-bolt" style={{ fontSize: '16px', color: 'white' }}></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Add animation styles */}
+      <style>{`
+        @keyframes fadeSlideIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
+    </section>
+  )
+}
+
 // Healthcare Page Layout
 const HealthcarePage: FC = () => {
   return (
@@ -1635,6 +2055,7 @@ const HealthcarePage: FC = () => {
       <FloatingNav />
       <HealthcareHero />
       <SolutionMatrixSection />
+      <HealthcareEngagementSection />
       <Footer />
       <script src="/static/geometric-hero.js" defer></script>
     </Layout>
