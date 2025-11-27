@@ -1285,23 +1285,26 @@ const HealthcareHero: FC = () => {
           display: 'inline-flex',
           alignItems: 'center',
           gap: '8px',
-          padding: '8px 16px',
-          background: 'rgba(0, 255, 148, 0.05)',
-          border: '2px solid rgba(0, 255, 148, 0.2)',
+          padding: '10px 20px',
+          background: 'rgba(0, 255, 148, 0.08)',
+          border: '1px solid rgba(0, 255, 148, 0.3)',
           borderRadius: '50px',
-          marginBottom: '48px'
+          marginBottom: '48px',
+          boxShadow: '0 0 20px rgba(0, 255, 148, 0.2)'
         }}>
           <div style={{
             width: '8px',
             height: '8px',
             borderRadius: '50%',
-            background: '#00FF94'
+            background: '#00FF94',
+            boxShadow: '0 0 10px rgba(0, 255, 148, 0.6)'
           }}></div>
           <span style={{
-            fontSize: '14px',
-            color: 'rgba(255, 255, 255, 0.7)',
-            letterSpacing: '0.1em',
-            textTransform: 'uppercase'
+            fontSize: '13px',
+            color: '#00FF94',
+            letterSpacing: '0.15em',
+            textTransform: 'uppercase',
+            fontWeight: '600'
           }}>Biologic Intelligence</span>
         </div>
 
@@ -1341,29 +1344,33 @@ const HealthcareHero: FC = () => {
         {/* Stats Card */}
         <div class="geometric-content-item geometric-content-item-2" style={{
           display: 'inline-block',
-          background: 'rgba(0, 255, 148, 0.05)',
+          background: 'rgba(0, 30, 20, 0.6)',
           backdropFilter: 'blur(20px)',
-          border: '1px solid rgba(0, 255, 148, 0.2)',
+          border: '1px solid rgba(0, 255, 148, 0.3)',
           borderRadius: '24px',
-          padding: '32px 64px',
-          marginTop: '24px'
+          padding: '40px 80px',
+          marginTop: '24px',
+          boxShadow: '0 8px 32px rgba(0, 255, 148, 0.15), inset 0 1px 0 rgba(0, 255, 148, 0.1)'
         }}>
           <div style={{
-            fontSize: '72px',
+            fontSize: '80px',
             fontWeight: '700',
             color: '#00FF94',
             lineHeight: '1',
-            marginBottom: '8px'
+            marginBottom: '12px',
+            textShadow: '0 0 30px rgba(0, 255, 148, 0.5)'
           }}>50%</div>
           <div style={{
-            fontSize: '18px',
+            fontSize: '20px',
             color: 'white',
             fontWeight: '600',
-            marginBottom: '4px'
+            marginBottom: '6px',
+            letterSpacing: '0.02em'
           }}>Faster Time-to-Insight</div>
           <div style={{
-            fontSize: '14px',
-            color: 'rgba(255, 255, 255, 0.5)'
+            fontSize: '15px',
+            color: 'rgba(255, 255, 255, 0.6)',
+            letterSpacing: '0.05em'
           }}>From Weeks to Days</div>
         </div>
       </div>
