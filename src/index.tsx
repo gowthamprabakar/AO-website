@@ -1645,12 +1645,17 @@ const HealthcareEngagementSection: FC = () => {
       }}>
         <div style={{
           display: 'grid',
-          gap: '40px',
-          gridTemplateColumns: '1fr'
+          gap: '48px',
+          gridTemplateColumns: '1fr',
+          alignItems: 'start'
         }}
-        class="lg:grid-cols-12">
+        class="lg:grid-cols-2">
           {/* Left Content */}
-          <div style={{ gridColumn: 'span 5 / span 5' }}>
+          <div style={{ 
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '24px'
+          }}>
             {/* Badge */}
             <div style={{
               display: 'inline-flex',
@@ -1829,7 +1834,11 @@ const HealthcareEngagementSection: FC = () => {
           </div>
 
           {/* Right Visual Grid */}
-          <div style={{ gridColumn: 'span 7 / span 7' }}>
+          <div style={{ 
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '16px'
+          }}>
             <div style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(2, 1fr)',
@@ -1839,9 +1848,9 @@ const HealthcareEngagementSection: FC = () => {
               {/* Card 1 */}
               <div style={{
                 position: 'relative',
-                height: '288px',
+                height: '240px',
                 overflow: 'hidden',
-                borderRadius: '16px',
+                borderRadius: '20px',
                 border: '1px solid rgba(0, 255, 148, 0.2)',
                 background: 'rgba(255, 255, 255, 0.05)',
                 backdropFilter: 'blur(12px)'
@@ -1890,9 +1899,9 @@ const HealthcareEngagementSection: FC = () => {
               {/* Card 2 */}
               <div style={{
                 position: 'relative',
-                height: '288px',
+                height: '240px',
                 overflow: 'hidden',
-                borderRadius: '16px',
+                borderRadius: '20px',
                 border: '1px solid rgba(59, 130, 246, 0.2)',
                 background: 'rgba(255, 255, 255, 0.05)'
               }}>
@@ -1964,9 +1973,9 @@ const HealthcareEngagementSection: FC = () => {
               <div style={{
                 position: 'relative',
                 gridColumn: 'span 2 / span 2',
-                height: '224px',
+                height: '200px',
                 overflow: 'hidden',
-                borderRadius: '16px',
+                borderRadius: '20px',
                 border: '1px solid rgba(139, 92, 246, 0.2)',
                 background: 'rgba(255, 255, 255, 0.05)'
               }}>
