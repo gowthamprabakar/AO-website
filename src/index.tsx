@@ -2868,6 +2868,905 @@ const InsurancePage: FC = () => {
   )
 }
 
+// Manufacturing Page Components
+const ManufacturingHero: FC = () => {
+  return (
+    <section id="geometric-hero-container" style={{
+      position: 'relative',
+      minHeight: '100vh',
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      overflow: 'hidden',
+      background: '#030303'
+    }}>
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        background: 'radial-gradient(ellipse at top, rgba(245, 158, 11, 0.05), transparent 50%), radial-gradient(ellipse at bottom right, rgba(234, 88, 12, 0.05), transparent 50%)',
+        filter: 'blur(60px)'
+      }}></div>
+
+      <div style={{
+        position: 'relative',
+        zIndex: 10,
+        maxWidth: '1200px',
+        margin: '0 auto',
+        padding: '0 32px',
+        textAlign: 'center'
+      }}>
+        <div class="geometric-content-item geometric-content-item-0" style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '8px',
+          padding: '10px 20px',
+          background: 'rgba(245, 158, 11, 0.08)',
+          border: '1px solid rgba(245, 158, 11, 0.3)',
+          borderRadius: '50px',
+          marginBottom: '48px',
+          boxShadow: '0 0 20px rgba(245, 158, 11, 0.2)'
+        }}>
+          <div style={{
+            width: '8px',
+            height: '8px',
+            borderRadius: '50%',
+            background: '#F59E0B',
+            boxShadow: '0 0 10px rgba(245, 158, 11, 0.6)'
+          }}></div>
+          <span style={{
+            fontSize: '13px',
+            color: '#F59E0B',
+            letterSpacing: '0.15em',
+            textTransform: 'uppercase',
+            fontWeight: '600'
+          }}>Physical Operations Intelligence</span>
+        </div>
+
+        <h1 class="geometric-content-item geometric-content-item-1" style={{
+          fontSize: 'clamp(40px, 8vw, 96px)',
+          fontWeight: '700',
+          marginBottom: '32px',
+          lineHeight: '1.1',
+          letterSpacing: '-0.02em'
+        }}>
+          <span style={{
+            background: 'linear-gradient(to bottom, white, rgba(255, 255, 255, 0.8))',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}>From Reactive Maintenance to</span>
+          <br />
+          <span style={{
+            background: 'linear-gradient(90deg, #F59E0B, rgba(255, 255, 255, 0.9), #F59E0B)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}>Predictive Operations</span>
+        </h1>
+
+        <p class="geometric-content-item geometric-content-item-2" style={{
+          fontSize: 'clamp(16px, 2vw, 20px)',
+          color: 'rgba(255, 255, 255, 0.6)',
+          marginBottom: '48px',
+          lineHeight: '1.7',
+          maxWidth: '800px',
+          margin: '0 auto 48px'
+        }}>
+          Deploy autonomous AI agents across production lines, supply chains, quality control, and digital twins—measured in uptime and efficiency, not downtime.
+        </p>
+
+        <div class="geometric-content-item geometric-content-item-2" style={{
+          display: 'inline-block',
+          background: 'rgba(40, 30, 0, 0.6)',
+          backdropFilter: 'blur(20px)',
+          border: '1px solid rgba(245, 158, 11, 0.3)',
+          borderRadius: '24px',
+          padding: '40px 80px',
+          marginTop: '24px',
+          boxShadow: '0 8px 32px rgba(245, 158, 11, 0.15), inset 0 1px 0 rgba(245, 158, 11, 0.1)'
+        }}>
+          <div style={{
+            fontSize: '80px',
+            fontWeight: '700',
+            color: '#F59E0B',
+            lineHeight: '1',
+            marginBottom: '12px',
+            textShadow: '0 0 30px rgba(245, 158, 11, 0.5)'
+          }}>40%</div>
+          <div style={{
+            fontSize: '20px',
+            color: 'white',
+            fontWeight: '600',
+            marginBottom: '6px',
+            letterSpacing: '0.02em'
+          }}>Reduction in Downtime</div>
+          <div style={{
+            fontSize: '15px',
+            color: 'rgba(255, 255, 255, 0.6)',
+            letterSpacing: '0.05em'
+          }}>Predictive Maintenance at Scale</div>
+        </div>
+      </div>
+
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        background: 'linear-gradient(to top, #030303, transparent, rgba(3, 3, 3, 0.8))',
+        pointerEvents: 'none'
+      }}></div>
+    </section>
+  )
+}
+
+// Manufacturing Features - Alternating Layout
+const ManufacturingFeaturesSection: FC = () => {
+  const features = [
+    {
+      title: 'Digital Twin Platform',
+      description: 'Create virtual replicas of your entire production line. Monitor, simulate, and optimize operations in real-time before implementing changes on the factory floor.',
+      icon: 'fa-cube',
+      image: 'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=1200&q=80',
+      tags: ['IoT', 'Unity3D', 'Azure Digital Twins'],
+      metric: '99.5% Simulation Accuracy',
+      color: '#F59E0B',
+      reverse: false
+    },
+    {
+      title: 'Predictive Maintenance AI',
+      description: 'Prevent equipment failures before they happen. Our AI analyzes sensor data, vibration patterns, and historical performance to predict maintenance needs.',
+      icon: 'fa-wrench',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=80',
+      tags: ['Time Series', 'Anomaly Detection', 'Edge Computing'],
+      metric: '40% Downtime Reduction',
+      color: '#EA580C',
+      reverse: true
+    },
+    {
+      title: 'Quality Control Vision',
+      description: 'Automated defect detection with computer vision. Inspect 100% of products at production speed with superhuman accuracy.',
+      icon: 'fa-eye',
+      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80',
+      tags: ['Computer Vision', 'TensorFlow', 'Edge AI'],
+      metric: '99.9% Defect Detection',
+      color: '#F59E0B',
+      reverse: false
+    },
+    {
+      title: 'Supply Chain Optimizer',
+      description: 'End-to-end visibility and optimization across your supply chain. Predict disruptions, optimize inventory, and automate procurement.',
+      icon: 'fa-truck',
+      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80',
+      tags: ['Optimization', 'Forecasting', 'ERP Integration'],
+      metric: '30% Inventory Reduction',
+      color: '#EA580C',
+      reverse: true
+    }
+  ];
+
+  return (
+    <section style={{
+      padding: '120px 32px',
+      background: '#050505',
+      position: 'relative'
+    }}>
+      <div style={{
+        maxWidth: '1400px',
+        margin: '0 auto'
+      }}>
+        {/* Section Header */}
+        <div style={{
+          textAlign: 'center',
+          marginBottom: '100px'
+        }}>
+          <h2 style={{
+            fontSize: 'clamp(36px, 5vw, 56px)',
+            fontWeight: '700',
+            color: 'white',
+            marginBottom: '16px'
+          }}>Manufacturing Intelligence Platform</h2>
+          <p style={{
+            fontSize: '18px',
+            color: 'rgba(255, 255, 255, 0.6)',
+            maxWidth: '600px',
+            margin: '0 auto'
+          }}>From factory floor to supply chain, AI that understands operations</p>
+        </div>
+
+        {/* Alternating Feature Blocks */}
+        {features.map((feature, index) => (
+          <div key={index} style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr',
+            gap: '48px',
+            alignItems: 'center',
+            marginBottom: '120px'
+          }}
+          class="lg:grid-cols-2">
+            {/* Image Side */}
+            <div style={{
+              order: feature.reverse ? 2 : 1,
+              position: 'relative',
+              height: '500px',
+              borderRadius: '24px',
+              overflow: 'hidden',
+              border: `1px solid ${feature.color}40`,
+              background: 'rgba(255, 255, 255, 0.02)'
+            }}>
+              <img src={feature.image} 
+                alt={feature.title}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  opacity: '0.7'
+                }} />
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                background: `linear-gradient(135deg, ${feature.color}20, transparent 70%)`
+              }}></div>
+              
+              {/* Floating Metric Badge */}
+              <div style={{
+                position: 'absolute',
+                top: '24px',
+                right: '24px',
+                background: 'rgba(0, 0, 0, 0.8)',
+                backdropFilter: 'blur(20px)',
+                padding: '16px 24px',
+                borderRadius: '16px',
+                border: `1px solid ${feature.color}60`
+              }}>
+                <div style={{
+                  fontSize: '24px',
+                  fontWeight: '700',
+                  color: feature.color,
+                  marginBottom: '4px'
+                }}>{feature.metric.split(' ')[0]}</div>
+                <div style={{
+                  fontSize: '12px',
+                  color: 'rgba(255, 255, 255, 0.7)'
+                }}>{feature.metric.split(' ').slice(1).join(' ')}</div>
+              </div>
+            </div>
+
+            {/* Content Side */}
+            <div style={{
+              order: feature.reverse ? 1 : 2,
+              padding: feature.reverse ? '0 48px 0 0' : '0 0 0 48px'
+            }}>
+              <div style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '64px',
+                height: '64px',
+                borderRadius: '16px',
+                background: `${feature.color}20`,
+                border: `1px solid ${feature.color}40`,
+                marginBottom: '24px'
+              }}>
+                <i class={`fas ${feature.icon}`} style={{ 
+                  fontSize: '28px', 
+                  color: feature.color 
+                }}></i>
+              </div>
+
+              <h3 style={{
+                fontSize: 'clamp(28px, 4vw, 42px)',
+                fontWeight: '700',
+                color: 'white',
+                marginBottom: '20px',
+                lineHeight: '1.2'
+              }}>{feature.title}</h3>
+
+              <p style={{
+                fontSize: '18px',
+                color: 'rgba(255, 255, 255, 0.7)',
+                lineHeight: '1.7',
+                marginBottom: '28px'
+              }}>{feature.description}</p>
+
+              {/* Tech Tags */}
+              <div style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '12px',
+                marginBottom: '32px'
+              }}>
+                {feature.tags.map(tag => (
+                  <span key={tag} style={{
+                    padding: '8px 16px',
+                    background: 'rgba(255, 255, 255, 0.05)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    borderRadius: '8px',
+                    fontSize: '13px',
+                    color: 'rgba(255, 255, 255, 0.8)',
+                    fontWeight: '500'
+                  }}>{tag}</span>
+                ))}
+              </div>
+
+              <a href="/deploy" style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '14px 28px',
+                background: feature.color,
+                color: '#000000',
+                borderRadius: '50px',
+                fontSize: '15px',
+                fontWeight: '600',
+                textDecoration: 'none',
+                transition: 'all 0.3s'
+              }}>
+                Learn More
+                <i class="fas fa-arrow-right" style={{ fontSize: '14px' }}></i>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+// Manufacturing Solutions Grid - 3 Column Layout
+const ManufacturingSolutionsGrid: FC = () => {
+  const solutions = [
+    {
+      icon: 'fa-robot',
+      title: 'Robotic Process Automation',
+      description: 'Automate repetitive tasks and workflows.',
+      color: '#F59E0B'
+    },
+    {
+      icon: 'fa-chart-bar',
+      title: 'Production Analytics',
+      description: 'Real-time OEE and performance metrics.',
+      color: '#EA580C'
+    },
+    {
+      icon: 'fa-shield-alt',
+      title: 'Safety Monitoring',
+      description: 'AI-powered workplace safety systems.',
+      color: '#F59E0B'
+    },
+    {
+      icon: 'fa-battery-three-quarters',
+      title: 'Energy Optimization',
+      description: 'Reduce energy costs with AI insights.',
+      color: '#EA580C'
+    },
+    {
+      icon: 'fa-warehouse',
+      title: 'Warehouse Intelligence',
+      description: 'Smart inventory and logistics management.',
+      color: '#F59E0B'
+    },
+    {
+      icon: 'fa-users-cog',
+      title: 'Workforce Optimization',
+      description: 'Skill matching and scheduling AI.',
+      color: '#EA580C'
+    }
+  ];
+
+  return (
+    <section style={{
+      padding: '100px 32px',
+      background: '#030303',
+      position: 'relative'
+    }}>
+      <div style={{
+        maxWidth: '1400px',
+        margin: '0 auto'
+      }}>
+        <div style={{
+          textAlign: 'center',
+          marginBottom: '64px'
+        }}>
+          <h2 style={{
+            fontSize: 'clamp(32px, 4vw, 48px)',
+            fontWeight: '700',
+            color: 'white',
+            marginBottom: '16px'
+          }}>Additional Capabilities</h2>
+          <p style={{
+            fontSize: '16px',
+            color: 'rgba(255, 255, 255, 0.6)'
+          }}>Comprehensive AI tools for modern manufacturing</p>
+        </div>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '24px'
+        }}>
+          {solutions.map((solution, index) => (
+            <div key={index} style={{
+              padding: '32px',
+              background: 'rgba(255, 255, 255, 0.02)',
+              backdropFilter: 'blur(20px)',
+              border: '1px solid rgba(255, 255, 255, 0.08)',
+              borderRadius: '20px',
+              transition: 'all 0.3s',
+              cursor: 'pointer'
+            }}
+            class="manufacturing-solution-card">
+              <div style={{
+                width: '56px',
+                height: '56px',
+                borderRadius: '12px',
+                background: `${solution.color}20`,
+                border: `1px solid ${solution.color}40`,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px'
+              }}>
+                <i class={`fas ${solution.icon}`} style={{ 
+                  fontSize: '24px', 
+                  color: solution.color 
+                }}></i>
+              </div>
+
+              <h3 style={{
+                fontSize: '20px',
+                fontWeight: '600',
+                color: 'white',
+                marginBottom: '12px'
+              }}>{solution.title}</h3>
+
+              <p style={{
+                fontSize: '14px',
+                color: 'rgba(255, 255, 255, 0.6)',
+                lineHeight: '1.6'
+              }}>{solution.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <style>{`
+        .manufacturing-solution-card:hover {
+          transform: translateY(-4px);
+          border-color: rgba(245, 158, 11, 0.3);
+          background: rgba(255, 255, 255, 0.04);
+        }
+      `}</style>
+    </section>
+  )
+}
+
+// Manufacturing Engagement Section
+const ManufacturingEngagementSection: FC = () => {
+  return (
+    <section style={{
+      position: 'relative',
+      paddingTop: '96px',
+      paddingBottom: '96px',
+      marginTop: '96px',
+      zIndex: 10
+    }}>
+      <div style={{
+        maxWidth: '1280px',
+        margin: '0 auto',
+        padding: '0 24px'
+      }}>
+        <div style={{
+          display: 'grid',
+          gap: '48px',
+          gridTemplateColumns: '1fr',
+          alignItems: 'start'
+        }}
+        class="lg:grid-cols-2">
+          <div style={{ 
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '24px'
+          }}>
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              borderRadius: '50px',
+              background: 'rgba(245, 158, 11, 0.1)',
+              border: '1px solid rgba(245, 158, 11, 0.2)',
+              padding: '6px 12px',
+              backdropFilter: 'blur(12px)',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.1s both'
+            }}>
+              <span style={{
+                fontSize: '12px',
+                color: 'rgba(245, 158, 11, 0.9)',
+                fontWeight: '500',
+                letterSpacing: '0.05em'
+              }}>Trusted by 500+ manufacturers worldwide</span>
+              <span style={{
+                display: 'inline-flex',
+                width: '20px',
+                height: '20px',
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderRadius: '50%',
+                background: 'rgba(255, 255, 255, 0.1)'
+              }}>
+                <i class="fas fa-arrow-right" style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}></i>
+              </span>
+            </div>
+
+            <h2 style={{
+              marginTop: '20px',
+              fontSize: 'clamp(32px, 5vw, 56px)',
+              color: 'white',
+              fontWeight: '700',
+              lineHeight: '1.1',
+              letterSpacing: '-0.02em',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.2s both'
+            }}>
+              We turn factories into <span style={{
+                background: 'linear-gradient(90deg, #F59E0B, #EA580C)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}>intelligent operations</span>
+            </h2>
+
+            <p style={{
+              fontSize: 'clamp(16px, 2vw, 18px)',
+              color: 'rgba(255, 255, 255, 0.7)',
+              maxWidth: '600px',
+              marginTop: '24px',
+              lineHeight: '1.7',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.3s both'
+            }}>
+              Deploy autonomous AI agents across production, quality control, and supply chain—measured in uptime, efficiency, and zero defects.
+            </p>
+
+            <div style={{
+              marginTop: '28px',
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'center',
+              gap: '12px',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.4s both'
+            }}>
+              <a href="/deploy" style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: '#F59E0B',
+                color: '#000000',
+                borderRadius: '50px',
+                padding: '12px 24px',
+                fontSize: '14px',
+                fontWeight: '600',
+                textDecoration: 'none',
+                border: '1px solid rgba(245, 158, 11, 0.3)',
+                boxShadow: '0 2.8px 2.2px rgba(245, 158, 11, 0.034)',
+                transition: 'all 0.3s',
+                cursor: 'pointer'
+              }}>
+                Schedule Tour
+                <i class="fas fa-industry" style={{ fontSize: '14px' }}></i>
+              </a>
+              <a href="/trust" style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: 'rgba(255, 255, 255, 0.05)',
+                color: 'rgba(255, 255, 255, 0.8)',
+                borderRadius: '50px',
+                padding: '12px 24px',
+                fontSize: '14px',
+                fontWeight: '500',
+                textDecoration: 'none',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                transition: 'all 0.3s',
+                cursor: 'pointer'
+              }}>
+                ISO 27001 Certified
+                <i class="fas fa-certificate" style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.7)' }}></i>
+              </a>
+            </div>
+
+            <div style={{
+              marginTop: '40px',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)',
+              gap: '24px',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.5s both'
+            }}>
+              <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                <div style={{
+                  display: 'flex',
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '8px',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  background: 'rgba(245, 158, 11, 0.1)',
+                  border: '1px solid rgba(245, 158, 11, 0.2)'
+                }}>
+                  <i class="fas fa-cogs" style={{ fontSize: '16px', color: '#F59E0B' }}></i>
+                </div>
+                <div>
+                  <p style={{
+                    fontSize: 'clamp(24px, 3vw, 32px)',
+                    color: 'white',
+                    fontWeight: '700',
+                    letterSpacing: '-0.02em'
+                  }}>10K+</p>
+                  <p style={{
+                    fontSize: '12px',
+                    color: 'rgba(255, 255, 255, 0.6)',
+                    marginTop: '4px'
+                  }}>Connected machines</p>
+                </div>
+              </div>
+              <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                <div style={{
+                  display: 'flex',
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '8px',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  background: 'rgba(245, 158, 11, 0.1)',
+                  border: '1px solid rgba(245, 158, 11, 0.2)'
+                }}>
+                  <i class="fas fa-clock" style={{ fontSize: '16px', color: '#F59E0B' }}></i>
+                </div>
+                <div>
+                  <p style={{
+                    fontSize: 'clamp(24px, 3vw, 32px)',
+                    color: 'white',
+                    fontWeight: '700',
+                    letterSpacing: '-0.02em'
+                  }}>99.7%</p>
+                  <p style={{
+                    fontSize: '12px',
+                    color: 'rgba(255, 255, 255, 0.6)',
+                    marginTop: '4px'
+                  }}>Average uptime achieved</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ 
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '16px'
+          }}>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)',
+              gap: '16px',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.55s both'
+            }}>
+              <div style={{
+                position: 'relative',
+                height: '240px',
+                overflow: 'hidden',
+                borderRadius: '20px',
+                border: '1px solid rgba(245, 158, 11, 0.2)',
+                background: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(12px)'
+              }}>
+                <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80" 
+                  alt="Manufacturing robotics and automation" 
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    opacity: '0.6',
+                    position: 'absolute'
+                  }} />
+                <div style={{
+                  position: 'absolute',
+                  inset: '0',
+                  background: 'linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)'
+                }}></div>
+                <div style={{
+                  position: 'absolute',
+                  bottom: '16px',
+                  left: '16px',
+                  right: '16px'
+                }}>
+                  <div style={{
+                    borderRadius: '12px',
+                    background: 'rgba(0, 0, 0, 0.7)',
+                    backdropFilter: 'blur(12px)',
+                    padding: '16px',
+                    border: '1px solid rgba(245, 158, 11, 0.2)'
+                  }}>
+                    <p style={{
+                      fontSize: '14px',
+                      fontWeight: '600',
+                      color: 'white'
+                    }}>Digital Twin Technology</p>
+                    <p style={{
+                      marginTop: '4px',
+                      fontSize: '12px',
+                      color: 'rgba(255, 255, 255, 0.7)'
+                    }}>Virtual factory simulations.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div style={{
+                position: 'relative',
+                height: '240px',
+                overflow: 'hidden',
+                borderRadius: '20px',
+                border: '1px solid rgba(234, 88, 12, 0.2)',
+                background: 'rgba(255, 255, 255, 0.05)'
+              }}>
+                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80" 
+                  alt="Quality control inspection systems" 
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    opacity: '0.6',
+                    position: 'absolute'
+                  }} />
+                <div style={{
+                  position: 'absolute',
+                  inset: '0',
+                  background: 'linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)'
+                }}></div>
+                <div style={{
+                  position: 'absolute',
+                  left: '16px',
+                  top: '16px'
+                }}>
+                  <div style={{
+                    borderRadius: '50px',
+                    background: 'rgba(0, 0, 0, 0.7)',
+                    backdropFilter: 'blur(12px)',
+                    padding: '6px 12px'
+                  }}>
+                    <span style={{
+                      fontSize: '12px',
+                      color: 'rgba(255, 255, 255, 0.8)',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '4px'
+                    }}>
+                      <i class="fas fa-eye" style={{ fontSize: '12px', color: 'white' }}></i>
+                      AI-Powered
+                    </span>
+                  </div>
+                </div>
+                <div style={{
+                  position: 'absolute',
+                  bottom: '16px',
+                  left: '16px',
+                  right: '16px'
+                }}>
+                  <div style={{
+                    borderRadius: '12px',
+                    background: 'rgba(0, 0, 0, 0.7)',
+                    backdropFilter: 'blur(12px)',
+                    padding: '16px',
+                    border: '1px solid rgba(234, 88, 12, 0.2)'
+                  }}>
+                    <p style={{
+                      fontSize: '14px',
+                      fontWeight: '600',
+                      color: 'white'
+                    }}>Quality Vision</p>
+                    <p style={{
+                      marginTop: '4px',
+                      fontSize: '12px',
+                      color: 'rgba(255, 255, 255, 0.7)'
+                    }}>99.9% defect detection.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div style={{
+                position: 'relative',
+                gridColumn: 'span 2 / span 2',
+                height: '200px',
+                overflow: 'hidden',
+                borderRadius: '20px',
+                border: '1px solid rgba(245, 158, 11, 0.2)',
+                background: 'rgba(255, 255, 255, 0.05)'
+              }}>
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1600&q=80" 
+                  alt="Supply chain and logistics optimization" 
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    opacity: '0.5',
+                    position: 'absolute'
+                  }} />
+                <div style={{
+                  position: 'absolute',
+                  inset: '0',
+                  background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent)'
+                }}></div>
+                <div style={{
+                  position: 'absolute',
+                  bottom: '16px',
+                  left: '16px',
+                  right: '16px'
+                }}>
+                  <div style={{
+                    display: 'flex',
+                    borderRadius: '12px',
+                    background: 'rgba(0, 0, 0, 0.7)',
+                    padding: '16px',
+                    backdropFilter: 'blur(12px)',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    border: '1px solid rgba(245, 158, 11, 0.2)'
+                  }}>
+                    <div>
+                      <p style={{
+                        fontSize: '14px',
+                        fontWeight: '600',
+                        color: 'white'
+                      }}>Supply Chain Intelligence</p>
+                      <p style={{
+                        marginTop: '4px',
+                        fontSize: '12px',
+                        color: 'rgba(255, 255, 255, 0.7)'
+                      }}>End-to-end visibility and optimization.</p>
+                    </div>
+                    <span style={{
+                      display: 'inline-flex',
+                      width: '36px',
+                      height: '36px',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      borderRadius: '8px',
+                      background: 'rgba(255, 255, 255, 0.1)'
+                    }}>
+                      <i class="fas fa-truck-loading" style={{ fontSize: '16px', color: 'white' }}></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        @keyframes fadeSlideIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
+    </section>
+  )
+}
+
+// Manufacturing Page Layout
+const ManufacturingPage: FC = () => {
+  return (
+    <Layout>
+      <FloatingNav />
+      <ManufacturingHero />
+      <ManufacturingFeaturesSection />
+      <ManufacturingSolutionsGrid />
+      <ManufacturingEngagementSection />
+      <Footer />
+      <script src="/static/geometric-hero.js" defer></script>
+    </Layout>
+  )
+}
+
 // Routes
 app.get('/', (c) => {
   return c.html(<Home />)
@@ -2879,6 +3778,10 @@ app.get('/healthcare', (c) => {
 
 app.get('/insurance', (c) => {
   return c.html(<InsurancePage />)
+})
+
+app.get('/manufacturing', (c) => {
+  return c.html(<ManufacturingPage />)
 })
 
 export default app
