@@ -19,6 +19,7 @@ const Layout: FC = (props) => {
         <script src="/static/shader-hero.js" defer></script>
         <script src="/static/orbital-timeline.js" defer></script>
         <script src="/static/shooting-stars.js" defer></script>
+        <script src="/static/intelligence-modal.js" defer></script>
         <style>{`
           @keyframes float {
             0%, 100% { transform: translateY(0px); }
@@ -124,12 +125,13 @@ const FloatingNav: FC = () => {
         <i class="fas fa-shield-alt" style={{ marginRight: '8px' }}></i>
         Assured Outcomes
       </button>
-      <button style={{
+      <button id="intelligence-btn" style={{
         padding: '8px 16px',
         borderRadius: '50px',
         color: 'white',
         fontSize: '14px',
-        transition: 'all 0.3s'
+        transition: 'all 0.3s',
+        cursor: 'pointer'
       }}>
         <i class="fas fa-brain" style={{ marginRight: '8px' }}></i>
         Intelligence
