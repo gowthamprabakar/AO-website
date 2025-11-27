@@ -2071,6 +2071,803 @@ const HealthcarePage: FC = () => {
   )
 }
 
+// Insurance Page Components
+const InsuranceHero: FC = () => {
+  return (
+    <section id="geometric-hero-container" style={{
+      position: 'relative',
+      minHeight: '100vh',
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      overflow: 'hidden',
+      background: '#030303'
+    }}>
+      {/* Background gradient */}
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        background: 'radial-gradient(ellipse at top, rgba(59, 130, 246, 0.05), transparent 50%), radial-gradient(ellipse at bottom right, rgba(139, 92, 246, 0.05), transparent 50%)',
+        filter: 'blur(60px)'
+      }}></div>
+
+      {/* Content */}
+      <div style={{
+        position: 'relative',
+        zIndex: 10,
+        maxWidth: '1200px',
+        margin: '0 auto',
+        padding: '0 32px',
+        textAlign: 'center'
+      }}>
+        {/* Badge */}
+        <div class="geometric-content-item geometric-content-item-0" style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '8px',
+          padding: '10px 20px',
+          background: 'rgba(59, 130, 246, 0.08)',
+          border: '1px solid rgba(59, 130, 246, 0.3)',
+          borderRadius: '50px',
+          marginBottom: '48px',
+          boxShadow: '0 0 20px rgba(59, 130, 246, 0.2)'
+        }}>
+          <div style={{
+            width: '8px',
+            height: '8px',
+            borderRadius: '50%',
+            background: '#3B82F6',
+            boxShadow: '0 0 10px rgba(59, 130, 246, 0.6)'
+          }}></div>
+          <span style={{
+            fontSize: '13px',
+            color: '#3B82F6',
+            letterSpacing: '0.15em',
+            textTransform: 'uppercase',
+            fontWeight: '600'
+          }}>Risk & Capital Intelligence</span>
+        </div>
+
+        {/* Main Headline */}
+        <h1 class="geometric-content-item geometric-content-item-1" style={{
+          fontSize: 'clamp(40px, 8vw, 96px)',
+          fontWeight: '700',
+          marginBottom: '32px',
+          lineHeight: '1.1',
+          letterSpacing: '-0.02em'
+        }}>
+          <span style={{
+            background: 'linear-gradient(to bottom, white, rgba(255, 255, 255, 0.8))',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}>From Manual Underwriting to</span>
+          <br />
+          <span style={{
+            background: 'linear-gradient(90deg, #3B82F6, rgba(255, 255, 255, 0.9), #3B82F6)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}>Predictive Precision</span>
+        </h1>
+
+        {/* Subtitle */}
+        <p class="geometric-content-item geometric-content-item-2" style={{
+          fontSize: 'clamp(16px, 2vw, 20px)',
+          color: 'rgba(255, 255, 255, 0.6)',
+          marginBottom: '48px',
+          lineHeight: '1.7',
+          maxWidth: '800px',
+          margin: '0 auto 48px'
+        }}>
+          Deploy autonomous AI agents across underwriting, claims processing, fraud detection, and risk modeling—measured in accuracy and speed, not human hours.
+        </p>
+
+        {/* Stats Card */}
+        <div class="geometric-content-item geometric-content-item-2" style={{
+          display: 'inline-block',
+          background: 'rgba(0, 20, 40, 0.6)',
+          backdropFilter: 'blur(20px)',
+          border: '1px solid rgba(59, 130, 246, 0.3)',
+          borderRadius: '24px',
+          padding: '40px 80px',
+          marginTop: '24px',
+          boxShadow: '0 8px 32px rgba(59, 130, 246, 0.15), inset 0 1px 0 rgba(59, 130, 246, 0.1)'
+        }}>
+          <div style={{
+            fontSize: '80px',
+            fontWeight: '700',
+            color: '#3B82F6',
+            lineHeight: '1',
+            marginBottom: '12px',
+            textShadow: '0 0 30px rgba(59, 130, 246, 0.5)'
+          }}>70%</div>
+          <div style={{
+            fontSize: '20px',
+            color: 'white',
+            fontWeight: '600',
+            marginBottom: '6px',
+            letterSpacing: '0.02em'
+          }}>Faster Claims Processing</div>
+          <div style={{
+            fontSize: '15px',
+            color: 'rgba(255, 255, 255, 0.6)',
+            letterSpacing: '0.05em'
+          }}>From Days to Hours</div>
+        </div>
+      </div>
+
+      {/* Gradient overlay */}
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        background: 'linear-gradient(to top, #030303, transparent, rgba(3, 3, 3, 0.8))',
+        pointerEvents: 'none'
+      }}></div>
+    </section>
+  )
+}
+
+const InsuranceSolutionsSection: FC = () => {
+  const solutions = [
+    {
+      category: 'Underwriting Intelligence',
+      icon: 'fa-chart-line',
+      title: 'Automated Risk Assessment',
+      description: 'Real-time analysis of risk factors across multiple data sources.',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+      tags: ['GPT-4', 'Actuarial Models', 'BigQuery'],
+      metric: '60% Faster Underwriting',
+      metricColor: '#3B82F6',
+      gradient: 'linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05))'
+    },
+    {
+      category: 'Claims Processing',
+      icon: 'fa-file-invoice-dollar',
+      title: 'Intelligent Claims Automation',
+      description: 'Automated claims intake, validation, and adjudication.',
+      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+      tags: ['OCR', 'NLP', 'RPA'],
+      metric: '70% Reduction in Processing Time',
+      metricColor: '#3B82F6',
+      gradient: 'linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05))'
+    },
+    {
+      category: 'Fraud Detection',
+      icon: 'fa-shield-alt',
+      title: 'Anomaly Detection Engine',
+      description: 'Real-time fraud detection across claims and applications.',
+      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80',
+      tags: ['ML Models', 'Graph DB', 'Pattern Recognition'],
+      metric: '85% Fraud Detection Rate',
+      metricColor: '#3B82F6',
+      gradient: 'linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05))'
+    },
+    {
+      category: 'Customer Service',
+      icon: 'fa-comments',
+      title: 'AI Claims Assistant',
+      description: '24/7 intelligent chatbot for policy and claims inquiries.',
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&q=80',
+      tags: ['GPT-4', 'Sentiment Analysis', 'Multi-channel'],
+      metric: '90% Query Resolution',
+      metricColor: '#3B82F6',
+      gradient: 'linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05))'
+    },
+    {
+      category: 'Policy Management',
+      icon: 'fa-file-contract',
+      title: 'Dynamic Pricing Engine',
+      description: 'AI-powered premium calculation and policy recommendations.',
+      image: 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&q=80',
+      tags: ['Actuarial AI', 'Market Data', 'Risk Scoring'],
+      metric: '25% Better Risk Pricing',
+      metricColor: '#3B82F6',
+      gradient: 'linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05))'
+    },
+    {
+      category: 'Regulatory Compliance',
+      icon: 'fa-balance-scale',
+      title: 'Compliance Monitor',
+      description: 'Automated regulatory reporting and compliance tracking.',
+      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80',
+      tags: ['RegTech', 'Document AI', 'Audit Trail'],
+      metric: '100% Compliance Rate',
+      metricColor: '#3B82F6',
+      gradient: 'linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05))'
+    },
+    {
+      category: 'Loss Prevention',
+      icon: 'fa-exclamation-triangle',
+      title: 'Predictive Loss Modeling',
+      description: 'Forecast and prevent losses before they occur.',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+      tags: ['Time Series', 'Weather API', 'IoT Data'],
+      metric: '40% Reduction in Losses',
+      metricColor: '#3B82F6',
+      gradient: 'linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05))'
+    },
+    {
+      category: 'Reinsurance',
+      icon: 'fa-handshake',
+      title: 'Reinsurance Optimizer',
+      description: 'Optimize reinsurance placement and treaty management.',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
+      tags: ['Portfolio Analysis', 'Risk Transfer', 'Capital Model'],
+      metric: 'Treaty Optimization',
+      metricColor: '#3B82F6',
+      gradient: 'linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05))'
+    }
+  ];
+
+  return (
+    <section style={{
+      padding: '120px 32px',
+      background: '#050505',
+      position: 'relative'
+    }}>
+      <div style={{
+        maxWidth: '1600px',
+        margin: '0 auto'
+      }}>
+        <div style={{
+          textAlign: 'center',
+          marginBottom: '80px'
+        }}>
+          <h2 style={{
+            fontSize: 'clamp(36px, 5vw, 56px)',
+            fontWeight: '700',
+            color: 'white',
+            marginBottom: '16px'
+          }}>Insurance AI Solutions</h2>
+          <p style={{
+            fontSize: '18px',
+            color: 'rgba(255, 255, 255, 0.6)',
+            maxWidth: '600px',
+            margin: '0 auto'
+          }}>Comprehensive intelligence for every insurance workflow</p>
+        </div>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))',
+          gap: '32px'
+        }}>
+          {solutions.map((solution, index) => (
+            <div style={{
+              background: 'rgba(255, 255, 255, 0.03)',
+              backdropFilter: 'blur(20px)',
+              border: '1px solid rgba(255, 255, 255, 0.08)',
+              borderRadius: '24px',
+              overflow: 'hidden',
+              transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+              cursor: 'pointer',
+              position: 'relative'
+            }}
+            class="solution-card">
+              <div style={{
+                height: '220px',
+                backgroundImage: `url(${solution.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                position: 'relative'
+              }}>
+                <div style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background: solution.gradient
+                }}></div>
+                
+                <div style={{
+                  position: 'absolute',
+                  top: '16px',
+                  left: '16px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  padding: '6px 12px',
+                  background: 'rgba(0, 0, 0, 0.6)',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(59, 130, 246, 0.3)',
+                  borderRadius: '50px',
+                  fontSize: '12px',
+                  color: '#3B82F6'
+                }}>
+                  <i class={`fas ${solution.icon}`}></i>
+                  <span>{solution.category}</span>
+                </div>
+              </div>
+
+              <div style={{
+                padding: '24px'
+              }}>
+                <h3 style={{
+                  fontSize: '22px',
+                  fontWeight: '700',
+                  color: 'white',
+                  marginBottom: '12px',
+                  lineHeight: '1.3'
+                }}>{solution.title}</h3>
+                
+                <p style={{
+                  fontSize: '15px',
+                  color: 'rgba(255, 255, 255, 0.6)',
+                  lineHeight: '1.6',
+                  marginBottom: '20px'
+                }}>{solution.description}</p>
+
+                <div style={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: '8px',
+                  marginBottom: '20px'
+                }}>
+                  {solution.tags.map(tag => (
+                    <span style={{
+                      padding: '6px 12px',
+                      background: 'rgba(255, 255, 255, 0.05)',
+                      border: '1px solid rgba(255, 255, 255, 0.1)',
+                      borderRadius: '8px',
+                      fontSize: '12px',
+                      color: 'rgba(255, 255, 255, 0.7)',
+                      fontWeight: '500'
+                    }}>{tag}</span>
+                  ))}
+                </div>
+
+                <div style={{
+                  padding: '16px',
+                  background: 'rgba(59, 130, 246, 0.08)',
+                  border: '1px solid rgba(59, 130, 246, 0.2)',
+                  borderRadius: '12px',
+                  fontSize: '14px',
+                  fontWeight: '600',
+                  color: solution.metricColor,
+                  textAlign: 'center'
+                }}>{solution.metric}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <style>{`
+        .solution-card:hover {
+          transform: translateY(-8px);
+          border-color: rgba(59, 130, 246, 0.3);
+          box-shadow: 0 20px 60px rgba(59, 130, 246, 0.15);
+        }
+      `}</style>
+    </section>
+  )
+}
+
+const InsuranceEngagementSection: FC = () => {
+  return (
+    <section style={{
+      position: 'relative',
+      paddingTop: '96px',
+      paddingBottom: '96px',
+      marginTop: '96px',
+      zIndex: 10
+    }}>
+      <div style={{
+        maxWidth: '1280px',
+        margin: '0 auto',
+        padding: '0 24px'
+      }}>
+        <div style={{
+          display: 'grid',
+          gap: '48px',
+          gridTemplateColumns: '1fr',
+          alignItems: 'start'
+        }}
+        class="lg:grid-cols-2">
+          <div style={{ 
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '24px'
+          }}>
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              borderRadius: '50px',
+              background: 'rgba(59, 130, 246, 0.1)',
+              border: '1px solid rgba(59, 130, 246, 0.2)',
+              padding: '6px 12px',
+              backdropFilter: 'blur(12px)',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.1s both'
+            }}>
+              <span style={{
+                fontSize: '12px',
+                color: 'rgba(59, 130, 246, 0.9)',
+                fontWeight: '500',
+                letterSpacing: '0.05em'
+              }}>Powering 200+ insurance carriers globally</span>
+              <span style={{
+                display: 'inline-flex',
+                width: '20px',
+                height: '20px',
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderRadius: '50%',
+                background: 'rgba(255, 255, 255, 0.1)'
+              }}>
+                <i class="fas fa-arrow-right" style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}></i>
+              </span>
+            </div>
+
+            <h2 style={{
+              marginTop: '20px',
+              fontSize: 'clamp(32px, 5vw, 56px)',
+              color: 'white',
+              fontWeight: '700',
+              lineHeight: '1.1',
+              letterSpacing: '-0.02em',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.2s both'
+            }}>
+              We turn complex risk into <span style={{
+                background: 'linear-gradient(90deg, #3B82F6, #8B5CF6)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}>clear decisions</span>
+            </h2>
+
+            <p style={{
+              fontSize: 'clamp(16px, 2vw, 18px)',
+              color: 'rgba(255, 255, 255, 0.7)',
+              maxWidth: '600px',
+              marginTop: '24px',
+              lineHeight: '1.7',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.3s both'
+            }}>
+              Deploy autonomous AI agents across underwriting, claims, fraud detection, and risk modeling—measured in accuracy and profitability, not processing time.
+            </p>
+
+            <div style={{
+              marginTop: '28px',
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'center',
+              gap: '12px',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.4s both'
+            }}>
+              <a href="/deploy" style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: '#3B82F6',
+                color: '#000000',
+                borderRadius: '50px',
+                padding: '12px 24px',
+                fontSize: '14px',
+                fontWeight: '600',
+                textDecoration: 'none',
+                border: '1px solid rgba(59, 130, 246, 0.3)',
+                boxShadow: '0 2.8px 2.2px rgba(59, 130, 246, 0.034), 0 6.7px 5.3px rgba(59, 130, 246, 0.048)',
+                transition: 'all 0.3s',
+                cursor: 'pointer'
+              }}>
+                Request Demo
+                <i class="fas fa-play-circle" style={{ fontSize: '14px' }}></i>
+              </a>
+              <a href="/trust" style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: 'rgba(255, 255, 255, 0.05)',
+                color: 'rgba(255, 255, 255, 0.8)',
+                borderRadius: '50px',
+                padding: '12px 24px',
+                fontSize: '14px',
+                fontWeight: '500',
+                textDecoration: 'none',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                transition: 'all 0.3s',
+                cursor: 'pointer'
+              }}>
+                SOC 2 Certified
+                <i class="fas fa-certificate" style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.7)' }}></i>
+              </a>
+            </div>
+
+            <div style={{
+              marginTop: '40px',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)',
+              gap: '24px',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.5s both'
+            }}>
+              <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                <div style={{
+                  display: 'flex',
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '8px',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  background: 'rgba(59, 130, 246, 0.1)',
+                  border: '1px solid rgba(59, 130, 246, 0.2)'
+                }}>
+                  <i class="fas fa-file-invoice" style={{ fontSize: '16px', color: '#3B82F6' }}></i>
+                </div>
+                <div>
+                  <p style={{
+                    fontSize: 'clamp(24px, 3vw, 32px)',
+                    color: 'white',
+                    fontWeight: '700',
+                    letterSpacing: '-0.02em'
+                  }}>100M+</p>
+                  <p style={{
+                    fontSize: '12px',
+                    color: 'rgba(255, 255, 255, 0.6)',
+                    marginTop: '4px'
+                  }}>Claims processed annually</p>
+                </div>
+              </div>
+              <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                <div style={{
+                  display: 'flex',
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '8px',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  background: 'rgba(59, 130, 246, 0.1)',
+                  border: '1px solid rgba(59, 130, 246, 0.2)'
+                }}>
+                  <i class="fas fa-dollar-sign" style={{ fontSize: '16px', color: '#3B82F6' }}></i>
+                </div>
+                <div>
+                  <p style={{
+                    fontSize: 'clamp(24px, 3vw, 32px)',
+                    color: 'white',
+                    fontWeight: '700',
+                    letterSpacing: '-0.02em'
+                  }}>$50B+</p>
+                  <p style={{
+                    fontSize: '12px',
+                    color: 'rgba(255, 255, 255, 0.6)',
+                    marginTop: '4px'
+                  }}>Premiums under management</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ 
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '16px'
+          }}>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)',
+              gap: '16px',
+              animation: 'fadeSlideIn 0.5s ease-in-out 0.55s both'
+            }}>
+              <div style={{
+                position: 'relative',
+                height: '240px',
+                overflow: 'hidden',
+                borderRadius: '20px',
+                border: '1px solid rgba(59, 130, 246, 0.2)',
+                background: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(12px)'
+              }}>
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" 
+                  alt="Business professional analyzing insurance data" 
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    opacity: '0.6',
+                    position: 'absolute'
+                  }} />
+                <div style={{
+                  position: 'absolute',
+                  inset: '0',
+                  background: 'linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)'
+                }}></div>
+                <div style={{
+                  position: 'absolute',
+                  bottom: '16px',
+                  left: '16px',
+                  right: '16px'
+                }}>
+                  <div style={{
+                    borderRadius: '12px',
+                    background: 'rgba(0, 0, 0, 0.7)',
+                    backdropFilter: 'blur(12px)',
+                    padding: '16px',
+                    border: '1px solid rgba(59, 130, 246, 0.2)'
+                  }}>
+                    <p style={{
+                      fontSize: '14px',
+                      fontWeight: '600',
+                      color: 'white'
+                    }}>Predictive Underwriting</p>
+                    <p style={{
+                      marginTop: '4px',
+                      fontSize: '12px',
+                      color: 'rgba(255, 255, 255, 0.7)'
+                    }}>AI-powered risk assessment in real-time.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div style={{
+                position: 'relative',
+                height: '240px',
+                overflow: 'hidden',
+                borderRadius: '20px',
+                border: '1px solid rgba(139, 92, 246, 0.2)',
+                background: 'rgba(255, 255, 255, 0.05)'
+              }}>
+                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80" 
+                  alt="Fraud detection and security analytics" 
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    opacity: '0.6',
+                    position: 'absolute'
+                  }} />
+                <div style={{
+                  position: 'absolute',
+                  inset: '0',
+                  background: 'linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)'
+                }}></div>
+                <div style={{
+                  position: 'absolute',
+                  left: '16px',
+                  top: '16px'
+                }}>
+                  <div style={{
+                    borderRadius: '50px',
+                    background: 'rgba(0, 0, 0, 0.7)',
+                    backdropFilter: 'blur(12px)',
+                    padding: '6px 12px'
+                  }}>
+                    <span style={{
+                      fontSize: '12px',
+                      color: 'rgba(255, 255, 255, 0.8)',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '4px'
+                    }}>
+                      <i class="fas fa-shield-alt" style={{ fontSize: '12px', color: 'white' }}></i>
+                      Real-time
+                    </span>
+                  </div>
+                </div>
+                <div style={{
+                  position: 'absolute',
+                  bottom: '16px',
+                  left: '16px',
+                  right: '16px'
+                }}>
+                  <div style={{
+                    borderRadius: '12px',
+                    background: 'rgba(0, 0, 0, 0.7)',
+                    backdropFilter: 'blur(12px)',
+                    padding: '16px',
+                    border: '1px solid rgba(139, 92, 246, 0.2)'
+                  }}>
+                    <p style={{
+                      fontSize: '14px',
+                      fontWeight: '600',
+                      color: 'white'
+                    }}>Fraud Detection</p>
+                    <p style={{
+                      marginTop: '4px',
+                      fontSize: '12px',
+                      color: 'rgba(255, 255, 255, 0.7)'
+                    }}>85% fraud detection accuracy.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div style={{
+                position: 'relative',
+                gridColumn: 'span 2 / span 2',
+                height: '200px',
+                overflow: 'hidden',
+                borderRadius: '20px',
+                border: '1px solid rgba(59, 130, 246, 0.2)',
+                background: 'rgba(255, 255, 255, 0.05)'
+              }}>
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=80" 
+                  alt="Insurance analytics dashboard" 
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    opacity: '0.5',
+                    position: 'absolute'
+                  }} />
+                <div style={{
+                  position: 'absolute',
+                  inset: '0',
+                  background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent)'
+                }}></div>
+                <div style={{
+                  position: 'absolute',
+                  bottom: '16px',
+                  left: '16px',
+                  right: '16px'
+                }}>
+                  <div style={{
+                    display: 'flex',
+                    borderRadius: '12px',
+                    background: 'rgba(0, 0, 0, 0.7)',
+                    padding: '16px',
+                    backdropFilter: 'blur(12px)',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    border: '1px solid rgba(59, 130, 246, 0.2)'
+                  }}>
+                    <div>
+                      <p style={{
+                        fontSize: '14px',
+                        fontWeight: '600',
+                        color: 'white'
+                      }}>Automated Claims Processing</p>
+                      <p style={{
+                        marginTop: '4px',
+                        fontSize: '12px',
+                        color: 'rgba(255, 255, 255, 0.7)'
+                      }}>From submission to payout in hours.</p>
+                    </div>
+                    <span style={{
+                      display: 'inline-flex',
+                      width: '36px',
+                      height: '36px',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      borderRadius: '8px',
+                      background: 'rgba(255, 255, 255, 0.1)'
+                    }}>
+                      <i class="fas fa-robot" style={{ fontSize: '16px', color: 'white' }}></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        @keyframes fadeSlideIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
+    </section>
+  )
+}
+
+// Insurance Page Layout
+const InsurancePage: FC = () => {
+  return (
+    <Layout>
+      <FloatingNav />
+      <InsuranceHero />
+      <InsuranceSolutionsSection />
+      <InsuranceEngagementSection />
+      <Footer />
+      <script src="/static/geometric-hero.js" defer></script>
+    </Layout>
+  )
+}
+
 // Routes
 app.get('/', (c) => {
   return c.html(<Home />)
@@ -2078,6 +2875,10 @@ app.get('/', (c) => {
 
 app.get('/healthcare', (c) => {
   return c.html(<HealthcarePage />)
+})
+
+app.get('/insurance', (c) => {
+  return c.html(<InsurancePage />)
 })
 
 export default app
