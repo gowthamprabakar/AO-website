@@ -1,0 +1,352 @@
+/* Radial Orbital Timeline Styles */
+
+.orbit-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+/* Center Core */
+.orbit-center {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00FF94, #3B82F6, #8B5CF6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.orbit-center-pulse {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  opacity: 0.7;
+}
+
+.orbit-center-pulse.delay {
+  width: 96px;
+  height: 96px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation-delay: 0.5s;
+  opacity: 0.5;
+}
+
+.orbit-center-core {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+}
+
+/* Orbit Ring */
+.orbit-ring {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Nodes Container */
+.orbit-nodes {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Individual Node */
+.orbit-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+/* Node Glow Effect */
+.orbit-node-glow {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.orbit-node.pulsing .orbit-node-glow {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+/* Node Circle */
+.orbit-node-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.orbit-node-circle.expanded {
+  background: white;
+  color: #000000;
+  border: 2px solid white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  transform: scale(1.5);
+}
+
+.orbit-node-circle.related {
+  background: rgba(255, 255, 255, 0.5);
+  color: #000000;
+  border: 2px solid white;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Node Title */
+.orbit-node-title {
+  position: absolute;
+  top: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.orbit-node:hover .orbit-node-title {
+  color: white;
+  transform: translateX(-50%) scale(1.1);
+}
+
+/* Card */
+.orbit-card {
+  display: none;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.1);
+  z-index: 300;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.orbit-card-connector {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.orbit-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.orbit-card-status {
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.status-completed {
+  background: white;
+  color: #000000;
+  border: 1px solid white;
+}
+
+.status-in-progress {
+  background: #00FF94;
+  color: #000000;
+  border: 1px solid #00FF94;
+}
+
+.status-pending {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.orbit-card-date {
+  font-size: 11px;
+  font-family: monospace;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.orbit-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  margin: 12px 0;
+}
+
+.orbit-card-content {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 16px;
+}
+
+/* Energy Section */
+.orbit-card-energy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+}
+
+.orbit-card-energy-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.orbit-card-energy-label i {
+  font-size: 10px;
+}
+
+.orbit-card-energy-value {
+  font-family: monospace;
+  font-weight: 600;
+  color: white;
+}
+
+.orbit-card-energy-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.orbit-card-energy-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+  border-radius: 9999px;
+  transition: width 0.5s ease;
+}
+
+/* Related Items */
+.orbit-card-related {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.orbit-card-related-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.orbit-card-related-header i {
+  font-size: 10px;
+}
+
+.orbit-card-related-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.orbit-card-related-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 11px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.orbit-card-related-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.orbit-card-related-btn i {
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

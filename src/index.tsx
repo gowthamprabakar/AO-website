@@ -13,9 +13,11 @@ const Layout: FC = (props) => {
         <title>Assured Outcomes - We Architect Assured Outcomes</title>
         <meta name="description" content="Deploy 80+ autonomous AI agents across Healthcare, Insurance, Manufacturing, and Telecom. We replace uncertainty with guaranteed performance." />
         <link rel="stylesheet" href="/static/globals.css" />
+        <link rel="stylesheet" href="/static/orbital-timeline.css" />
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
         <script src="/static/shader-hero.js" defer></script>
+        <script src="/static/orbital-timeline.js" defer></script>
         <style>{`
           @keyframes float {
             0%, 100% { transform: translateY(0px); }
@@ -978,6 +980,238 @@ const CraftingExperiencesSection: FC = () => {
   )
 }
 
+// Orbital Timeline Section - Our Offerings
+const OrbitalTimelineSection: FC = () => {
+  return (
+    <section style={{
+      padding: '100px 32px',
+      background: '#000000',
+      position: 'relative',
+      minHeight: '100vh'
+    }}>
+      <div style={{
+        maxWidth: '1600px',
+        margin: '0 auto'
+      }}>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr',
+          gap: '64px',
+          alignItems: 'center'
+        }}
+        class="lg:grid-cols-2">
+          
+          {/* Left Column - Orbital Visualization */}
+          <div style={{
+            position: 'relative',
+            minHeight: '600px'
+          }}>
+            <div id="orbital-timeline-container" style={{
+              width: '100%',
+              height: '600px',
+              position: 'relative'
+            }}></div>
+          </div>
+
+          {/* Right Column - Description */}
+          <div style={{
+            color: 'white',
+            padding: '32px'
+          }}>
+            <div style={{
+              marginBottom: '32px'
+            }}>
+              <div style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '8px 16px',
+                background: 'rgba(0, 255, 148, 0.1)',
+                border: '1px solid rgba(0, 255, 148, 0.2)',
+                borderRadius: '50px',
+                fontSize: '12px',
+                color: '#00FF94',
+                marginBottom: '24px',
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase'
+              }}>
+                <i class="fas fa-atom"></i>
+                <span>Our Offering Universe</span>
+              </div>
+
+              <h2 style={{
+                fontSize: 'clamp(36px, 6vw, 64px)',
+                fontWeight: '700',
+                lineHeight: '1.1',
+                marginBottom: '24px',
+                letterSpacing: '-0.02em'
+              }}>
+                80+ AI Solutions<br />
+                <span style={{
+                  background: 'linear-gradient(90deg, #00FF94, #3B82F6, #8B5CF6)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent'
+                }}>Orbiting Your Success</span>
+              </h2>
+
+              <p style={{
+                fontSize: '18px',
+                lineHeight: '1.7',
+                color: 'rgba(255, 255, 255, 0.7)',
+                marginBottom: '32px'
+              }}>
+                Our autonomous AI agents orbit around your business needs, each one a specialized solution designed to deliver guaranteed outcomes. Click any node to explore specific capabilities and see how they interconnect to form a comprehensive intelligence ecosystem.
+              </p>
+            </div>
+
+            {/* Feature List */}
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '24px'
+            }}>
+              <div style={{
+                display: 'flex',
+                gap: '16px',
+                alignItems: 'flex-start'
+              }}>
+                <div style={{
+                  width: '48px',
+                  height: '48px',
+                  borderRadius: '12px',
+                  background: 'rgba(0, 255, 148, 0.1)',
+                  border: '1px solid rgba(0, 255, 148, 0.2)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0
+                }}>
+                  <i class="fas fa-network-wired" style={{ color: '#00FF94', fontSize: '20px' }}></i>
+                </div>
+                <div>
+                  <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '8px' }}>Interconnected Intelligence</h3>
+                  <p style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)', lineHeight: '1.6' }}>
+                    Each solution is designed to work in harmony with others, creating a synergistic effect that amplifies results across your organization.
+                  </p>
+                </div>
+              </div>
+
+              <div style={{
+                display: 'flex',
+                gap: '16px',
+                alignItems: 'flex-start'
+              }}>
+                <div style={{
+                  width: '48px',
+                  height: '48px',
+                  borderRadius: '12px',
+                  background: 'rgba(59, 130, 246, 0.1)',
+                  border: '1px solid rgba(59, 130, 246, 0.2)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0
+                }}>
+                  <i class="fas fa-rocket" style={{ color: '#3B82F6', fontSize: '20px' }}></i>
+                </div>
+                <div>
+                  <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '8px' }}>Autonomous Operation</h3>
+                  <p style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)', lineHeight: '1.6' }}>
+                    Our AI agents operate independently, making intelligent decisions 24/7 without human intervention, ensuring consistent and reliable outcomes.
+                  </p>
+                </div>
+              </div>
+
+              <div style={{
+                display: 'flex',
+                gap: '16px',
+                alignItems: 'flex-start'
+              }}>
+                <div style={{
+                  width: '48px',
+                  height: '48px',
+                  borderRadius: '12px',
+                  background: 'rgba(139, 92, 246, 0.1)',
+                  border: '1px solid rgba(139, 92, 246, 0.2)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0
+                }}>
+                  <i class="fas fa-chart-line" style={{ color: '#8B5CF6', fontSize: '20px' }}></i>
+                </div>
+                <div>
+                  <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '8px' }}>Guaranteed Outcomes</h3>
+                  <p style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)', lineHeight: '1.6' }}>
+                    We don't just promise results—we architect them. Each solution comes with measurable KPIs and guaranteed performance benchmarks.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div style={{
+              marginTop: '48px',
+              paddingTop: '32px',
+              borderTop: '1px solid rgba(255, 255, 255, 0.1)'
+            }}>
+              <p style={{
+                fontSize: '14px',
+                color: 'rgba(255, 255, 255, 0.5)',
+                marginBottom: '16px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em'
+              }}>
+                Ready to explore?
+              </p>
+              <div style={{
+                display: 'flex',
+                gap: '12px',
+                flexWrap: 'wrap'
+              }}>
+                <button style={{
+                  background: 'white',
+                  color: '#000000',
+                  padding: '14px 28px',
+                  borderRadius: '50px',
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  border: 'none',
+                  cursor: 'pointer',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  transition: 'all 0.3s'
+                }}>
+                  View All Solutions
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+                <button style={{
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  color: 'white',
+                  padding: '14px 28px',
+                  borderRadius: '50px',
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  cursor: 'pointer',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  transition: 'all 0.3s'
+                }}>
+                  <i class="fas fa-phone"></i>
+                  Schedule Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 // Main Home Page
 const Home: FC = () => {
   return (
@@ -986,6 +1220,7 @@ const Home: FC = () => {
       <Hero />
       <IndustriesSection />
       <CraftingExperiencesSection />
+      <OrbitalTimelineSection />
       <Footer />
     </Layout>
   )
