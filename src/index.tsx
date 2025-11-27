@@ -18,6 +18,7 @@ const Layout: FC = (props) => {
         <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
         <script src="/static/shader-hero.js" defer></script>
         <script src="/static/orbital-timeline.js" defer></script>
+        <script src="/static/shooting-stars.js" defer></script>
         <style>{`
           @keyframes float {
             0%, 100% { transform: translateY(0px); }
