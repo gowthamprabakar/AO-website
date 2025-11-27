@@ -369,7 +369,8 @@ const IndustriesSection: FC = () => {
       color: '#00FF94',
       icon: 'fa-dna',
       description: 'Oncology, Triage, R&D',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+      link: '/healthcare'
     },
     {
       title: 'Insurance',
@@ -377,7 +378,8 @@ const IndustriesSection: FC = () => {
       color: '#3B82F6',
       icon: 'fa-shield-alt',
       description: 'Underwriting, Claims, Fraud',
-      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80',
+      link: '/insurance'
     },
     {
       title: 'Manufacturing',
@@ -385,7 +387,8 @@ const IndustriesSection: FC = () => {
       color: '#F59E0B',
       icon: 'fa-industry',
       description: 'Digital Twins, Supply Chain',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80',
+      link: '/manufacturing'
     },
     {
       title: 'Telecom',
@@ -393,7 +396,8 @@ const IndustriesSection: FC = () => {
       color: '#8B5CF6',
       icon: 'fa-signal',
       description: 'AIOps, 5G Slicing',
-      image: 'https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800&q=80',
+      link: '/telecom'
     }
   ]
 
@@ -427,7 +431,7 @@ const IndustriesSection: FC = () => {
           gap: '24px'
         }}>
           {industries.map((industry) => (
-            <div style={{
+            <a href={industry.link} style={{
               position: 'relative',
               aspectRatio: '1',
               borderRadius: '24px',
@@ -435,8 +439,11 @@ const IndustriesSection: FC = () => {
               border: '1px solid rgba(255, 255, 255, 0.1)',
               cursor: 'pointer',
               transition: 'all 0.3s',
-              background: `linear-gradient(135deg, ${industry.color}10 0%, transparent 100%)`
-            }}>
+              background: `linear-gradient(135deg, ${industry.color}10 0%, transparent 100%)`,
+              textDecoration: 'none',
+              color: 'white',
+              display: 'block'
+            }} class="industry-card">
               {/* Background Image */}
               <div style={{
                 position: 'absolute',
@@ -502,11 +509,25 @@ const IndustriesSection: FC = () => {
                 opacity: '0',
                 transition: 'opacity 0.5s',
                 pointerEvents: 'none'
-              }}></div>
-            </div>
+              }} class="industry-glow"></div>
+            </a>
           ))}
         </div>
       </div>
+      
+      {/* Add hover styles */}
+      <style>{`
+        .industry-card:hover {
+          transform: translateY(-8px);
+          border-color: rgba(255, 255, 255, 0.3);
+        }
+        .industry-card:hover .industry-glow {
+          opacity: 0.2;
+        }
+        .industry-card:hover > div:first-child {
+          opacity: 0.4;
+        }
+      `}</style>
     </section>
   )
 }
@@ -652,14 +673,14 @@ const Footer: FC = () => {
               <div>
                 <p style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '16px' }}>Explore Intelligence</p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px', fontSize: '14px' }}>
-                  <a href="#">Healthcare</a>
-                  <a href="#">Insurance</a>
-                  <a href="#">Manufacturing</a>
-                  <a href="#">Telecom</a>
-                  <a href="#">Playground</a>
-                  <a href="#">Manifesto</a>
-                  <a href="#">Trust Center</a>
-                  <a href="#">Deploy</a>
+                  <a href="/healthcare">Healthcare</a>
+                  <a href="/insurance">Insurance</a>
+                  <a href="/manufacturing">Manufacturing</a>
+                  <a href="/telecom">Telecom</a>
+                  <a href="/playground">Playground</a>
+                  <a href="/manifesto">Manifesto</a>
+                  <a href="/trust">Trust Center</a>
+                  <a href="/deploy">Deploy</a>
                 </div>
               </div>
 
