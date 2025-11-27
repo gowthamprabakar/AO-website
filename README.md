@@ -39,6 +39,11 @@
   - "Powered By" card with animated marquee showing tech partners:
     - VERTEX AI, PYTORCH, SNOWFLAKE, TENSORFLOW, NVIDIA
 - **Orbital Timeline Section** - Interactive AI solutions visualization
+  - **Shooting Stars Background Effect**: Animated starfield with multiple layers
+    - 3 layers of shooting stars with different colors and speeds
+    - Purple/cyan, pink/yellow, and green/blue color schemes
+    - Twinkling static stars background
+    - Radial gradient overlay for depth
   - Split layout: orbital visualization left, description right
   - 5 orbital nodes representing service categories:
     - Healthcare AI (20 solutions)
@@ -221,6 +226,15 @@ git log --oneline
   - Smooth CSS transitions and animations
   - Expandable detail cards with backdrop blur
   - Mobile-friendly touch interactions
+- **Shooting Stars Effect** - Animated background system:
+  - Multi-layer ShootingStar class implementation
+  - SVG-based rendering with gradient trails
+  - Random entry points from all 4 screen edges
+  - Variable speed and scale progression
+  - Auto-cleanup when stars exit viewport
+  - Layered animation with different colors
+  - Static starfield with twinkling animation
+  - Performance optimized with requestAnimationFrame
 
 ## Dependencies
 - **hono**: ^4.10.7 - Lightweight web framework
